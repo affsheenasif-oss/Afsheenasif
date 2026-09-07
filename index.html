@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afsheen Asif — Full-Stack Engineer & Automation Architect</title>
+  <meta name="description" content="Portfolio of Afsheen Asif: Full-Stack Engineer and Automation Architect building high-converting web platforms, autonomous n8n workflows, and production AI agents." />
+  <meta name="author" content="Afsheen Asif" />
+  <meta property="og:title" content="Afsheen Asif — Full-Stack Engineer & Automation Architect" />
+  <meta property="og:description" content="High-Converting Web Platforms, Autonomous Workflows & Production AI Agents." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Font Awesome 6.5.1 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Global Root Variables & Theme Tokens */
+    :root {
+      --bg-dark: #030712;
+      --card-dark: #0f172a;
+      --card-secondary: #1e293b;
+      --border-dark: #334155;
+      --border-light: rgba(255, 255, 255, 0.1);
+      --accent-indigo: #6366f1;
+      --accent-indigo-hover: #4f46e5;
+      --accent-blue: #3b82f6;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-teal: #0d9488;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    /* Core Document Settings */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Selection Highlighting */
+    ::selection {
+      background: var(--accent-indigo);
+      color: #ffffff;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030712;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+      border: 1px solid #334155;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-indigo);
+    }
+
+    /* Typography Utilities */
+    .font-display { font-family: var(--font-display); }
+    .font-mono { font-family: var(--font-mono); }
+
+    .text-gradient-primary {
+      background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-blue {
+      background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-purple {
+      background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Background Mesh & Grid Patterns */
+    .bg-grid-overlay {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glassmorphic Cyber Cards */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-dark);
+      border-radius: 1rem;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.5);
+      box-shadow: 0 16px 32px -10px rgba(99, 102, 241, 0.25);
+    }
+
+    /* Glow Effects */
+    .glow-indigo {
+      box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.5);
+    }
+    .glow-blue {
+      box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
+    }
+    .glow-purple {
+      box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.5);
+    }
+
+    /* Custom Buttons */
+    .btn-gradient-primary {
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
+      color: #ffffff;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-gradient-primary:hover {
+      background: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #7c3aed 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+    }
+
+    .btn-outline-cyber {
+      background: rgba(15, 23, 42, 0.8);
+      color: #e2e8f0;
+      font-weight: 600;
+      border: 1px solid var(--border-dark);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-outline-cyber:hover {
+      background: rgba(30, 41, 59, 0.9);
+      color: #ffffff;
+      border-color: #64748b;
+      transform: translateY(-2px);
+    }
+
+    /* Custom Range Sliders */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      background: #1e293b;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: var(--accent-indigo);
+      cursor: pointer;
+      border: 3px solid #0f172a;
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.8);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      background: #818cf8;
+      box-shadow: 0 0 16px rgba(129, 140, 248, 1);
+    }
+
+    /* Custom Navbar Overrides */
+    .navbar-dark-cyber {
+      background: rgba(3, 7, 18, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+    }
+
+    .nav-link-cyber {
+      color: #94a3b8 !important;
+      font-weight: 500;
+      font-size: 0.92rem;
+      padding: 0.5rem 0.9rem !important;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link-cyber:hover {
+      color: #818cf8 !important;
+    }
+
+    /* Badges & Pills */
+    .badge-cyber-indigo {
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      font-size: 0.75rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 0.375rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    .badge-cyber-dark {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+      font-size: 0.75rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 0.375rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    /* Research Snapshot Specific Styles (Exact Crisp White Card Contrast) */
+    .snapshot-container {
+      background: #0b0f19;
+      border: 1px solid #334155;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    .snapshot-header-banner {
+      background: linear-gradient(135deg, #7e22ce 0%, #6366f1 50%, #9333ea 100%);
+      padding: 1.1rem 1.75rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .snapshot-white-card {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 0.875rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .snapshot-white-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px -5px rgba(0, 0, 0, 0.45);
+    }
+
+    .badge-circle-teal {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ccfbf1;
+      color: #0d9488;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .badge-circle-blue {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .badge-circle-purple {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #f3e8ff;
+      color: #9333ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="position-fixed top-0 start-0 w-100 h-100 overflow-hidden pointer-events-none" style="z-index: 0;">
+    <div class="ambient-orb" style="top: -100px; left: -100px; width: 450px; height: 450px; background: rgba(99, 102, 241, 0.12);"></div>
+    <div class="ambient-orb" style="top: 35%; right: -150px; width: 500px; height: 500px; background: rgba(168, 85, 247, 0.08);"></div>
+    <div class="ambient-orb" style="bottom: 50px; left: 25%; width: 400px; height: 400px; background: rgba(59, 130, 246, 0.08);"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-grid-overlay opacity-50"></div>
+  </div>
+
+  <!-- 1. STICKY HEADER / NAVIGATION (BOOTSTRAP 5) -->
+  <header class="sticky-top navbar-dark-cyber" style="z-index: 1030;">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        
+        <!-- Brand Logo & Tagline -->
+        <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="#">
+          <div class="position-relative d-flex align-items-center justify-content-center" 
+               style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #3b82f6, #9333ea); padding: 1.5px; box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);">
+            <div class="w-100 h-100 rounded-3 d-flex align-items-center justify-content-center" style="background: #030712;">
+              <span class="font-display fw-bold text-gradient-primary" style="font-size: 1.15rem;">AA</span>
+            </div>
+            <!-- Glowing Blue Dot -->
+            <span class="position-absolute bottom-0 end-0 translate-middle p-1 rounded-circle" 
+                  style="background: #38bdf8; box-shadow: 0 0 8px #38bdf8; width: 9px; height: 9px; margin-bottom: -2px; margin-right: -2px;"></span>
+          </div>
+          <div>
+            <div class="d-flex align-items-center gap-1">
+              <span class="font-display fw-bolder text-white tracking-tight" style="font-size: 1.25rem; letter-spacing: -0.02em;">AFSHEEN ASIF.</span>
+              <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            </div>
+            <div class="font-mono text-uppercase" style="font-size: 0.68rem; color: #94a3b8; letter-spacing: 0.05em;">
+              Full-Stack Engineer & Automation Architect
+            </div>
+          </div>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 p-2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars fs-4"></i>
+        </button>
+
+        <!-- Navbar Links & Action Buttons -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link nav-link-cyber" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-cyber" href="#case-study">Case Study</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-cyber d-flex align-items-center gap-1" href="#roi-calculator">
+                <span>ROI Calculator</span>
+                <span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.65rem; font-family: var(--font-mono);">LIVE</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-cyber" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <a href="#contact" class="btn btn-outline-cyber btn-sm px-3 py-2">
+              Contact
+            </a>
+            <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-gradient-primary btn-sm px-4 py-2 text-nowrap">
+              <span>Hire on Fiverr</span>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="position-relative" style="z-index: 10;">
+
+    <!-- 2. HERO SECTION -->
+    <section class="py-5 py-lg-6 position-relative overflow-hidden">
+      <div class="container py-lg-4">
+        
+        <div class="row align-items-center gy-5">
+          
+          <!-- Left Hero Column -->
+          <div class="col-lg-7 text-center text-lg-start">
+            
+            <!-- Badge -->
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4" 
+                 style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); color: #c7d2fe; font-size: 0.85rem; font-weight: 500;">
+              <span class="d-inline-block rounded-circle" style="width: 8px; height: 8px; background: #818cf8; box-shadow: 0 0 8px #818cf8;"></span>
+              <span>⚡ Next.js Full-Stack Architecture & Autonomous n8n Systems</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-display fw-bolder text-white mb-3" style="font-size: calc(1.8rem + 1.8vw); line-height: 1.15; letter-spacing: -0.02em;">
+              Hi, I'm <span class="text-white">Afsheen Asif</span>.<br />
+              I Build <span class="text-gradient-primary">High-Converting Web Platforms</span>, Autonomous Workflows & Production AI Agents.
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="lead text-secondary mb-4 mx-auto mx-lg-0" style="font-size: 1.1rem; color: #cbd5e1 !important; max-width: 620px;">
+              Helping businesses and digital agencies eliminate manual operations, optimize technical SEO pipelines, and scale revenue with engineering-grade web solutions.
+            </p>
+
+            <!-- Metrics Pills -->
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mb-4 font-mono" style="font-size: 0.8rem;">
+              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+                <i class="fa-solid fa-bolt text-warning me-1"></i> 450+ Automated Flows
+              </div>
+              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+                <i class="fa-solid fa-gauge-high text-success me-1"></i> 99.9% Uptime SLA
+              </div>
+              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+                <i class="fa-solid fa-clock-rotate-left text-info me-1"></i> &gt;10,000 Hrs Reclaimed
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3 pt-2">
+              <a href="#roi-calculator" class="btn btn-gradient-primary px-4 py-3 w-100 w-sm-auto">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Calculate ROI</span>
+              </a>
+              <a href="#services" class="btn btn-outline-cyber px-4 py-3 w-100 w-sm-auto">
+                <span>Explore Services</span>
+                <i class="fa-solid fa-arrow-down fs-6"></i>
+              </a>
+            </div>
+
+            <!-- Direct Verification Note -->
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-4 text-muted" style="font-size: 0.8rem;">
+              <span class="text-success"><i class="fa-solid fa-circle-check"></i> Verified Fiverr Professional</span>
+              <span>•</span>
+              <span>Fast 24-Hour Turnaround</span>
+              <span>•</span>
+              <span>Custom Sandbox Architecture</span>
+            </div>
+
+          </div>
+
+          <!-- Right Hero Column: Orchestrator Terminal Card -->
+          <div class="col-lg-5">
+            <div class="position-relative mx-auto" style="max-width: 480px;">
+              
+              <!-- Backing Glow -->
+              <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 rounded-4 glow-indigo" 
+                   style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.15)); filter: blur(30px); z-index: -1;"></div>
+
+              <!-- Terminal Component -->
+              <div class="rounded-4 overflow-hidden shadow-lg" style="background: #0b0f19; border: 1px solid #334155;">
+                
+                <!-- Terminal Header Bar -->
+                <div class="d-flex align-items-center justify-content-between px-3 py-2.5" style="background: #030712; border-bottom: 1px solid #1e293b;">
+                  <div class="d-flex align-items-center gap-1.5">
+                    <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: #ef4444;"></span>
+                    <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: #f59e0b;"></span>
+                    <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: #10b981;"></span>
+                  </div>
+                  <div class="font-mono text-muted" style="font-size: 0.72rem;">
+                    <i class="fa-solid fa-terminal text-primary me-1"></i> afsheen@architect:~/workflows
+                  </div>
+                  <div class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 font-mono" style="font-size: 0.65rem;">
+                    LIVE
+                  </div>
+                </div>
+
+                <!-- Terminal Body / Visual Node Flow -->
+                <div class="p-3 font-mono" style="font-size: 0.78rem;">
+                  
+                  <div class="d-flex justify-content-between text-muted pb-2 mb-3 border-bottom border-dark-subtle" style="font-size: 0.7rem; border-color: #1e293b !important;">
+                    <span>PIPELINE: <strong class="text-white">Next.js + n8n + AI Agent</strong></span>
+                    <span class="text-success fw-bold">RUNNING</span>
+                  </div>
+
+                  <!-- Flow Step 1 -->
+                  <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: #0f172a; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <div class="d-flex align-items-center gap-2.5">
+                      <div class="d-flex align-items-center justify-content-center rounded-2 text-primary" style="width: 30px; height: 30px; background: rgba(99, 102, 241, 0.15);">
+                        <i class="fa-solid fa-bolt"></i>
+                      </div>
+                      <div>
+                        <div class="text-white fw-semibold" style="font-size: 0.75rem;">Webhook Event Listener</div>
+                        <div class="text-muted" style="font-size: 0.68rem;">Incoming Lead / Stripe Checkout</div>
+                      </div>
+                    </div>
+                    <span class="badge bg-primary bg-opacity-25 text-primary-emphasis" style="font-size: 0.65rem;">200 OK</span>
+                  </div>
+
+                  <div class="text-center my-1 text-secondary" style="font-size: 0.7rem;">
+                    <i class="fa-solid fa-arrow-down text-primary"></i>
+                  </div>
+
+                  <!-- Flow Step 2 -->
+                  <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: #0f172a; border: 1px solid rgba(168, 85, 247, 0.3);">
+                    <div class="d-flex align-items-center gap-2.5">
+                      <div class="d-flex align-items-center justify-content-center rounded-2" style="width: 30px; height: 30px; background: rgba(168, 85, 247, 0.15); color: #c084fc;">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div>
+                        <div class="text-white fw-semibold" style="font-size: 0.75rem;">AI Agent (RAG Triage)</div>
+                        <div class="text-muted" style="font-size: 0.68rem;">GPT-4o Vector Lead Scoring</div>
+                      </div>
+                    </div>
+                    <span class="badge bg-purple bg-opacity-25 text-white" style="background: rgba(168, 85, 247, 0.2); font-size: 0.65rem;">99.4% Match</span>
+                  </div>
+
+                  <div class="text-center my-1 text-secondary" style="font-size: 0.7rem;">
+                    <i class="fa-solid fa-arrow-down text-primary"></i>
+                  </div>
+
+                  <!-- Flow Step 3 -->
+                  <div class="p-2.5 rounded-3 d-flex align-items-center justify-content-between" style="background: #0f172a; border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <div class="d-flex align-items-center gap-2.5">
+                      <div class="d-flex align-items-center justify-content-center rounded-2 text-success" style="width: 30px; height: 30px; background: rgba(16, 185, 129, 0.15);">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </div>
+                      <div>
+                        <div class="text-white fw-semibold" style="font-size: 0.75rem;">Multi-Channel Dispatch</div>
+                        <div class="text-muted" style="font-size: 0.68rem;">HubSpot CRM + WhatsApp VIP Alert</div>
+                      </div>
+                    </div>
+                    <span class="badge bg-success bg-opacity-25 text-success" style="font-size: 0.65rem;">0.12s Sync</span>
+                  </div>
+
+                  <!-- Terminal Footer Status -->
+                  <div class="d-flex justify-content-between align-items-center p-2 mt-3 rounded-2 text-muted" style="background: #030712; border: 1px solid #1e293b; font-size: 0.68rem;">
+                    <span><i class="fa-solid fa-server text-info me-1"></i> Docker Container</span>
+                    <span><i class="fa-solid fa-shield-halved text-primary me-1"></i> TLS Encrypted</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 3. CASE STUDY / RESEARCH SNAPSHOT SECTION (EXACT REFERENCE LAYOUT) -->
+    <section id="case-study" class="py-5 position-relative">
+      <div class="container py-lg-4">
+        
+        <!-- Section Title Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+          <div class="font-mono text-uppercase text-primary fw-bold mb-2" style="font-size: 0.75rem; letter-spacing: 0.1em;">
+            RECAP — EXAMPLE
+          </div>
+          <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
+            A Research Snapshot, Put Together
+          </h2>
+          <p class="text-secondary" style="font-size: 0.95rem; color: #94a3b8 !important;">
+            What a finished set of research notes looks like once Company, Audience, and Theme are captured.
+          </p>
+        </div>
+
+        <!-- Snapshot Structured Component -->
+        <div class="snapshot-container mx-auto" style="max-width: 960px;">
+          
+          <!-- Violet/Purple Top Banner -->
+          <div class="snapshot-header-banner">
+            <div class="d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center justify-content-center rounded-3" 
+                   style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px);">
+                <i class="fa-regular fa-clipboard fs-5"></i>
+              </div>
+              <h3 class="font-display fw-bold mb-0 text-white" style="font-size: 1.1rem; letter-spacing: -0.01em;">
+                Client: Corner Bakery Co. — Website Redesign
+              </h3>
+            </div>
+            <div class="d-none d-sm-block">
+              <span class="badge rounded-pill px-3 py-1.5 font-mono" style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.7rem;">
+                <i class="fa-solid fa-circle text-success me-1" style="font-size: 0.5rem;"></i> Verified Case Study
+              </span>
+            </div>
+          </div>
+
+          <!-- 3 Distinct Clean White / Light Cards in a Row -->
+          <div class="p-4 p-md-5" style="background: #070d19;">
+            <div class="row g-4">
+              
+              <!-- Card 1: COMPANY -->
+              <div class="col-md-4">
+                <div class="snapshot-white-card">
+                  <div>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <!-- Circular Badge (Teal tone) -->
+                      <div class="badge-circle-teal">
+                        <i class="fa-solid fa-building"></i>
+                      </div>
+                      <div>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #0d9488; letter-spacing: 0.05em;">COMPANY</div>
+                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Corner Bakery Co.</h4>
+                      </div>
+                    </div>
+                    
+                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                      Multi-location bakery chain expanding online catering, requiring automated reservation and order intake.
+                    </p>
+                  </div>
+
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
+                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Scale: 12 Locations</span>
+                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: AUDIENCE -->
+              <div class="col-md-4">
+                <div class="snapshot-white-card">
+                  <div>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <!-- Circular Badge (Blue tone) -->
+                      <div class="badge-circle-blue">
+                        <i class="fa-solid fa-users"></i>
+                      </div>
+                      <div>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #2563eb; letter-spacing: 0.05em;">AUDIENCE</div>
+                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Catering Buyers</h4>
+                      </div>
+                    </div>
+                    
+                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                      Corporate event coordinators and local catering clients seeking rapid, friction-free mobile order checkout.
+                    </p>
+                  </div>
+
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
+                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Target: B2B & Retail</span>
+                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: THEME -->
+              <div class="col-md-4">
+                <div class="snapshot-white-card">
+                  <div>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <!-- Circular Badge (Purple tone) -->
+                      <div class="badge-circle-purple">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                      </div>
+                      <div>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #9333ea; letter-spacing: 0.05em;">THEME</div>
+                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Speed & Automation</h4>
+                      </div>
+                    </div>
+                    
+                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                      Ultra-fast responsive interface, sub-second Edge load speeds, and automated n8n notifications pushed to staff.
+                    </p>
+                  </div>
+
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
+                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Stack: Next.js + n8n</span>
+                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Footer Bar -->
+          <div class="px-4 py-3 d-flex flex-wrap justify-content-between align-items-center font-mono" style="background: #030712; border-top: 1px solid #1e293b; font-size: 0.75rem; color: #94a3b8;">
+            <div>Architect: <strong class="text-white">Afsheen Asif</strong></div>
+            <div class="d-flex gap-3">
+              <span>⏱️ Turnaround: <strong class="text-white">9 Days</strong></span>
+              <span>⚡ Saved: <strong class="text-success">18 hrs/wk</strong></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 4. INTERACTIVE ROI & SAVINGS CALCULATOR -->
+    <section id="roi-calculator" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b;">
+      <div class="container py-lg-4">
+        
+        <!-- Section Title Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+          <div class="badge badge-cyber-indigo mb-2">
+            <i class="fa-solid fa-calculator me-1"></i> ESTIMATION ENGINE
+          </div>
+          <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
+            Calculate Your Automation ROI & Annual Savings
+          </h2>
+          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+            Estimate the exact capital and engineering hours your business will recover each year by eliminating repetitive manual operations.
+          </p>
+        </div>
+
+        <!-- Calculator Grid Layout -->
+        <div class="row g-4 align-items-stretch justify-content-center">
+          
+          <!-- Left: Sliders Column -->
+          <div class="col-lg-7">
+            <div class="glass-card p-4 p-md-5 h-100 d-flex flex-col justify-content-between">
+              
+              <div>
+                
+                <!-- Slider 1: Manual Hours Spent per Week -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label for="hours-slider" class="form-label fw-semibold text-white mb-0" style="font-size: 0.95rem;">
+                      <i class="fa-solid fa-clock text-primary me-2"></i> Manual Hours Spent per Week
+                    </label>
+                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.9rem;">
+                      <span id="hours-val">26</span> <span style="font-size: 0.75rem; font-weight: normal; color: #94a3b8;">hrs/wk</span>
+                    </div>
+                  </div>
+                  <input type="range" class="form-range" min="5" max="100" value="26" step="1" id="hours-slider" aria-label="Manual Hours Spent per Week" />
+                  <div class="d-flex justify-content-between font-mono text-muted mt-1" style="font-size: 0.7rem;">
+                    <span>5 hrs (Light)</span>
+                    <span>50 hrs (Team)</span>
+                    <span>100 hrs (Enterprise)</span>
+                  </div>
+                </div>
+
+                <!-- Slider 2: Average Hourly Team Wage -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label for="wage-slider" class="form-label fw-semibold text-white mb-0" style="font-size: 0.95rem;">
+                      <i class="fa-solid fa-dollar-sign text-success me-2"></i> Average Hourly Team Wage ($)
+                    </label>
+                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.9rem;">
+                      $<span id="wage-val">45</span> <span style="font-size: 0.75rem; font-weight: normal; color: #94a3b8;">/hr</span>
+                    </div>
+                  </div>
+                  <input type="range" class="form-range" min="15" max="150" value="45" step="5" id="wage-slider" aria-label="Average Hourly Team Wage in Dollars" />
+                  <div class="d-flex justify-content-between font-mono text-muted mt-1" style="font-size: 0.7rem;">
+                    <span>$15/hr (Admin)</span>
+                    <span>$75/hr (Engineering)</span>
+                    <span>$150/hr (Senior / Executive)</span>
+                  </div>
+                </div>
+
+                <!-- Dropdown: Target Operations Area -->
+                <div class="mb-3">
+                  <label for="ops-area-select" class="form-label fw-semibold text-white mb-2" style="font-size: 0.95rem;">
+                    <i class="fa-solid fa-layer-group text-info me-2"></i> Target Operations Area
+                  </label>
+                  <select id="ops-area-select" class="form-select bg-dark text-white border-secondary p-3" style="border-color: #334155 !important; border-radius: 0.75rem; font-size: 0.9rem;">
+                    <option value="lead-crm" selected>Lead Capture & CRM Sync (Autonomous qualification & pipeline sync)</option>
+                    <option value="support-chat">Customer Support & Chatbot Triage (RAG AI doc triage & live escalations)</option>
+                    <option value="ecom-flow">E-commerce Order Flow (Inventory multi-store sync & notification triggers)</option>
+                    <option value="fullstack-ai">Full-Stack AI Stack (Custom Next.js portal + self-hosted n8n engine)</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Methodology Note -->
+              <div class="pt-3 mt-4 border-top font-mono text-muted d-flex align-items-center gap-2" style="border-color: #1e293b !important; font-size: 0.72rem;">
+                <i class="fa-solid fa-info-circle text-primary"></i>
+                <span>Calculated dynamically as: (Hours × 52 × Wage × 75% efficiency factor).</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Output Column -->
+          <div class="col-lg-5">
+            <div class="d-flex flex-column justify-content-between h-100 gap-4">
+              
+              <!-- Main Annual Savings Card -->
+              <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden glow-indigo" 
+                   style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.4);">
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="font-mono text-uppercase fw-semibold text-primary-emphasis" style="font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <i class="fa-solid fa-vault me-1"></i> Projected Annual Cost Savings
+                  </span>
+                  <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25 font-mono" style="font-size: 0.68rem;">HIGH ROI</span>
+                </div>
+
+                <div class="font-display fw-bolder text-white mb-2 d-flex align-items-baseline gap-1" style="font-size: calc(2.2rem + 1.2vw); letter-spacing: -0.03em;">
+                  <span class="text-success">$</span><span id="savings-display" class="text-gradient-primary">45,630</span>
+                </div>
+
+                <p class="text-muted mb-0" style="font-size: 0.82rem;">
+                  Direct reduction in recurring manual overhead, reinvestable into strategic business growth.
+                </p>
+              </div>
+
+              <!-- Two Smaller Stats Cards -->
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="glass-card p-3 p-md-4 text-center">
+                    <div class="font-mono text-muted text-uppercase mb-1" style="font-size: 0.68rem;">Hours Recovered</div>
+                    <div class="font-display fw-bold text-white fs-4">
+                      <span id="hours-recovered-display">1,352</span> <span class="fs-6 fw-normal text-muted">hrs/yr</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="glass-card p-3 p-md-4 text-center">
+                    <div class="font-mono text-muted text-uppercase mb-1" style="font-size: 0.68rem;">Efficiency Gain</div>
+                    <div class="font-display fw-bold text-success fs-4">
+                      <span id="efficiency-display">+380%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div>
+                <a href="#contact" class="btn btn-gradient-primary w-100 py-3 d-flex justify-content-center align-items-center gap-2 text-decoration-none">
+                  <span>Build This Workflow Now</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 5. SERVICES GRID (MATCHING AFSHEEN'S FIVERR GIGS) -->
+    <section id="services" class="py-5 position-relative">
+      <div class="container py-lg-4">
+        
+        <!-- Section Title Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+          <div class="badge badge-cyber-indigo mb-2">
+            <i class="fa-solid fa-cubes me-1"></i> VERIFIED GIG OFFERINGS
+          </div>
+          <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
+            High-Performance Engineering Services
+          </h2>
+          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+            Order directly via Fiverr with escrow buyer protection or engage directly for custom sprint contracts.
+          </p>
+        </div>
+
+        <!-- 6 Services Cards Grid -->
+        <div class="row g-4">
+          
+          <!-- Service 1: n8n Automation AI Agents & Workflow -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <i class="fa-solid fa-diagram-project fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$490</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  n8n Automation AI Agents & Workflow
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Lead generation pipelines, autonomous AI research, multi-step webhooks, and self-hosted Docker orchestrations.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">n8n</span>
+                  <span class="badge badge-cyber-dark">Make</span>
+                  <span class="badge badge-cyber-dark">Zapier</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Zero-loss webhook failover</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> CRM & Database synchronization</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i> Error monitoring Telegram/Slack bots</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: React, Next.js & Bootstrap Web Development -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3);">
+                    <i class="fa-solid fa-code fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$1,250</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  React, Next.js & Bootstrap Web Development
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Fast server-side rendering, responsive dashboards, modern clean code, and API-driven architectures.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">Next.js</span>
+                  <span class="badge badge-cyber-dark">React</span>
+                  <span class="badge badge-cyber-dark">Bootstrap</span>
+                  <span class="badge badge-cyber-dark">Tailwind</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Sub-second Edge caching & SSR</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Stripe & auth gateway integration</li>
+                  <li><i class="fa-solid fa-check text-info me-2"></i> 100% responsive fluid UI systems</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: AI Automation & Custom Chatbots -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+                    <i class="fa-solid fa-robot fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$650</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  AI Automation & Custom Chatbots
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Document retrieval, automated lead booking, and WhatsApp / Discord / Web conversational triage.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">LLMs</span>
+                  <span class="badge badge-cyber-dark">RAG</span>
+                  <span class="badge badge-cyber-dark">LangChain</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> Pinecone / Vector DB knowledge base</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> WhatsApp & Web embed widgets</li>
+                  <li><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> Google Calendar live auto-booking</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4: Flutter Mobile App Development -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <i class="fa-solid fa-mobile-screen-button fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$1,450</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  Flutter Mobile App Development
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Cross-platform iOS & Android, offline sync, native speed, and unified reactive UI architectures.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">Flutter</span>
+                  <span class="badge badge-cyber-dark">Dart</span>
+                  <span class="badge badge-cyber-dark">Firebase</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Single codebase for App Store & Play Store</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Push notifications & auth flows</li>
+                  <li><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Offline local caching (Hive/SQLite)</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5: Technical & Off-Page SEO Systems -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <i class="fa-solid fa-magnifying-glass-chart fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$350</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  Technical & Off-Page SEO Systems
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Crawl optimization, JSON-LD Schema markup, Lighthouse 99+ audits, and organic authority roadmaps.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">SEO</span>
+                  <span class="badge badge-cyber-dark">Core Web Vitals</span>
+                  <span class="badge badge-cyber-dark">Schema</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Perfect Core Web Vitals (LCP, CLS, INP)</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Structured rich snippet Schema data</li>
+                  <li><i class="fa-solid fa-check text-success me-2"></i> Search Console indexation fixes</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6: Accurate Data Systems & Technical Content -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">
+                    <i class="fa-solid fa-database fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
+                    <span class="font-display fw-bolder text-white fs-4">$200</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  Accurate Data Systems & Technical Content
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  High-precision data structuring, technical documentation, content pipelines, and dataset cleansing.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">Data Entry</span>
+                  <span class="badge badge-cyber-dark">Content Systems</span>
+                  <span class="badge badge-cyber-dark">ETL</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> 100% verified data extraction & ETL</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Technical API & engineering writing</li>
+                  <li><i class="fa-solid fa-check text-warning me-2"></i> CSV, JSON, PostgreSQL schema migration</li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 6. CONTACT FORM SECTION -->
+    <section id="contact" class="py-5 position-relative">
+      <div class="container py-lg-4">
+        
+        <div class="glass-card p-4 p-md-5 mx-auto" style="max-width: 960px;">
+          
+          <div class="row g-5">
+            
+            <!-- Left Contact Info -->
+            <div class="col-lg-5">
+              <div class="badge badge-cyber-indigo mb-3">
+                <i class="fa-solid fa-paper-plane me-1"></i> DIRECT INQUIRY
+              </div>
+              
+              <h2 class="font-display fw-bolder text-white mb-3" style="font-size: 1.8rem; letter-spacing: -0.02em;">
+                Let's Build Your Autonomous Stack
+              </h2>
+              
+              <p class="text-secondary mb-4" style="font-size: 0.92rem; line-height: 1.6; color: #94a3b8 !important;">
+                Have a project or recurring automation bottlenecks? Fill out the form or reach out directly via email.
+              </p>
+
+              <div class="d-flex flex-column gap-3 font-mono" style="font-size: 0.85rem;">
+                
+                <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 40px; height: 40px; background: #1e293b; color: #818cf8;">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="text-muted d-block" style="font-size: 0.7rem;">EMAIL</span>
+                    <a href="mailto:affsheenasif@gmail.com" class="text-white text-decoration-none fw-semibold">
+                      affsheenasif@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 40px; height: 40px; background: #1e293b; color: #10b981;">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="text-muted d-block" style="font-size: 0.7rem;">LOCATION</span>
+                    <span class="text-white">Faisalabad, Pakistan (UTC+5)</span>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 40px; height: 40px; background: #1e293b; color: #38bdf8;">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div>
+                    <span class="text-muted d-block" style="font-size: 0.7rem;">FIVERR</span>
+                    <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none">
+                      fiverr.com/users/afsheenasif
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right Contact Form -->
+            <div class="col-lg-7">
+              <div class="p-3 p-md-4 rounded-4" style="background: #030712; border: 1px solid #1e293b;">
+                <form id="contact-form">
+                  
+                  <div class="mb-3">
+                    <label for="form-name" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Your Name / Organization</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary p-2.5" id="form-name" required placeholder="Alex Turner / Acme Labs" style="border-color: #334155 !important; font-size: 0.9rem;" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="form-email" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Your Email Address</label>
+                    <input type="email" class="form-control bg-dark text-white border-secondary p-2.5" id="form-email" required placeholder="alex@acmelabs.com" style="border-color: #334155 !important; font-size: 0.9rem;" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="form-service" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Service Needed</label>
+                    <select class="form-select bg-dark text-white border-secondary p-2.5" id="form-service" style="border-color: #334155 !important; font-size: 0.9rem;">
+                      <option value="n8n Automation AI Agents & Workflow">n8n Automation AI Agents & Workflow ($490+)</option>
+                      <option value="React, Next.js & Bootstrap Web Development">React, Next.js & Bootstrap Web Development ($1,250+)</option>
+                      <option value="AI Automation & Custom Chatbots">AI Automation & Custom Chatbots ($650+)</option>
+                      <option value="Flutter Mobile App Development">Flutter Mobile App Development ($1,450+)</option>
+                      <option value="Technical & Off-Page SEO Systems">Technical & Off-Page SEO Systems ($350+)</option>
+                      <option value="Accurate Data Systems & Technical Content">Accurate Data Systems & Technical Content ($200+)</option>
+                      <option value="Custom Engineering Architecture">Custom Engineering Architecture</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="form-message" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Project Details / Bottlenecks</label>
+                    <textarea class="form-control bg-dark text-white border-secondary p-2.5" id="form-message" rows="3" required placeholder="Describe your workflow requirements, APIs to connect, or timelines..." style="border-color: #334155 !important; font-size: 0.9rem; resize: none;"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-gradient-primary w-100 py-3 d-flex justify-content-center align-items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Send Project Inquiry</span>
+                  </button>
+
+                  <div id="form-alert" class="alert alert-success d-none mt-3 font-mono" style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;" role="alert">
+                    🚀 Draft created! Launching your email client to send to <strong>affsheenasif@gmail.com</strong>...
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- 7. FOOTER -->
+  <footer class="py-5" style="background: #020617; border-top: 1px solid #1e293b; z-index: 10; position: relative;">
+    <div class="container">
+      
+      <div class="row align-items-center gy-4 pb-4 border-bottom" style="border-color: #1e293b !important;">
+        
+        <!-- Brand Signature -->
+        <div class="col-md-6 text-center text-md-start">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-1">
+            <span class="font-display fw-bolder text-white fs-5">AFSHEEN ASIF.</span>
+            <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+          </div>
+          <div class="font-mono text-muted" style="font-size: 0.8rem;">
+            Afsheen Asif — Autonomous Systems & Engineering
+          </div>
+          <div class="font-mono text-muted" style="font-size: 0.75rem;">
+            Faisalabad, Pakistan
+          </div>
+        </div>
+
+        <!-- Social Channels -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-3">
+            
+            <!-- Fiverr -->
+            <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-outline-cyber p-2 d-flex align-items-center justify-content-center" 
+               style="width: 42px; height: 42px; border-radius: 10px;" aria-label="Fiverr Profile">
+              <i class="fa-solid fa-bolt text-success"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/afsheen-asif-6a476a308" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-outline-cyber p-2 d-flex align-items-center justify-content-center" 
+               style="width: 42px; height: 42px; border-radius: 10px;" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in text-info"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+               class="btn btn-outline-cyber p-2 d-flex align-items-center justify-content-center" 
+               style="width: 42px; height: 42px; border-radius: 10px;" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github text-white"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:affsheenasif@gmail.com" 
+               class="btn btn-outline-cyber p-2 d-flex align-items-center justify-content-center" 
+               style="width: 42px; height: 42px; border-radius: 10px;" aria-label="Email Afsheen Asif">
+              <i class="fa-solid fa-envelope text-primary"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 font-mono text-muted" style="font-size: 0.75rem;">
+        <div>© 2026 Afsheen Asif. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
+          <span>Engineered for 60fps & 99.9% Uptime</span>
+          <span>•</span>
+          <a href="#" class="text-primary text-decoration-none">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- BOOTSTRAP 5.3.3 BUNDLE JS (Includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- VANILLA JAVASCRIPT: ROI CALCULATOR & MAILTO FORM ENGINE -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. ROI & Annual Savings Interactive Calculator
+      const hoursSlider = document.getElementById('hours-slider');
+      const wageSlider = document.getElementById('wage-slider');
+      const opsAreaSelect = document.getElementById('ops-area-select');
+
+      const hoursVal = document.getElementById('hours-val');
+      const wageVal = document.getElementById('wage-val');
+      
+      const savingsDisplay = document.getElementById('savings-display');
+      const hoursRecoveredDisplay = document.getElementById('hours-recovered-display');
+      const efficiencyDisplay = document.getElementById('efficiency-display');
+
+      const efficiencyMap = {
+        'lead-crm': '+380%',
+        'support-chat': '+420%',
+        'ecom-flow': '+340%',
+        'fullstack-ai': '+510%'
+      };
+
+      function updateCalculator() {
+        if (!hoursSlider || !wageSlider) return;
+
+        const hours = parseFloat(hoursSlider.value) || 26;
+        const wage = parseFloat(wageSlider.value) || 45;
+        const opsArea = opsAreaSelect ? opsAreaSelect.value : 'lead-crm';
+
+        // Update Slider Labels
+        if (hoursVal) hoursVal.textContent = hours;
+        if (wageVal) wageVal.textContent = wage;
+
+        // Exact Formula Requirement: (Hours * 52 * Wage * 0.75)
+        const annualSavings = Math.round(hours * 52 * wage * 0.75);
+        const hoursRecovered = Math.round(hours * 52);
+
+        // Format outputs with commas
+        if (savingsDisplay) {
+          savingsDisplay.textContent = annualSavings.toLocaleString('en-US');
+        }
+
+        if (hoursRecoveredDisplay) {
+          hoursRecoveredDisplay.textContent = hoursRecovered.toLocaleString('en-US');
+        }
+
+        if (efficiencyDisplay) {
+          efficiencyDisplay.textContent = efficiencyMap[opsArea] || '+380%';
+        }
+      }
+
+      // Listen for slider inputs and dropdown changes
+      if (hoursSlider) hoursSlider.addEventListener('input', updateCalculator);
+      if (wageSlider) wageSlider.addEventListener('input', updateCalculator);
+      if (opsAreaSelect) opsAreaSelect.addEventListener('change', updateCalculator);
+
+      // Run initial computation
+      updateCalculator();
+
+      // 2. Interactive Contact Form Mailto Handler
+      const contactForm = document.getElementById('contact-form');
+      const formAlert = document.getElementById('form-alert');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById('form-name')?.value || '';
+          const email = document.getElementById('form-email')?.value || '';
+          const service = document.getElementById('form-service')?.value || '';
+          const message = document.getElementById('form-message')?.value || '';
+
+          const subject = encodeURIComponent(`Project Inquiry: [${service}] - ${name}`);
+          const body = encodeURIComponent(
+            `Hello Afsheen,\n\n` +
+            `My name is ${name} (${email}).\n` +
+            `I am interested in hiring you for: ${service}\n\n` +
+            `Project Details / Operational Bottlenecks:\n${message}\n\n` +
+            `Looking forward to hearing from you!\n\n` +
+            `Best regards,\n${name}`
+          );
+
+          if (formAlert) {
+            formAlert.classList.remove('d-none');
+          }
+
+          setTimeout(() => {
+            window.location.href = `mailto:affsheenasif@gmail.com?subject=${subject}&body=${body}`;
+          }, 600);
+        });
+      }
+
+      // 3. Auto-collapse mobile navbar when clicking navigation links
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-collapse .btn');
+      const navbarCollapse = document.getElementById('navbarMain');
+      if (navbarCollapse) {
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+              const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+              if (bsCollapse) bsCollapse.hide();
+            }
+          });
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
