@@ -1604,16 +1604,14 @@
                   </div>
 
                   <!-- Send Project Inquiry Animated Gradient Border CTA -->
-                  <button type="submit" class="btn-animated-border w-100 p-0 border-0 bg-transparent">
-                    <span class="btn-inner py-3 fs-6">
+                  <button type="submit" id="form-submit-btn" class="btn-animated-border w-100 p-0 border-0 bg-transparent">
+                    <span class="btn-inner py-3 fs-6" id="form-btn-content">
                       <i class="fa-solid fa-paper-plane"></i>
                       <span>Send Project Inquiry</span>
                     </span>
                   </button>
 
-                  <div id="form-alert" class="alert alert-success d-none mt-3 font-mono" style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;" role="alert">
-                    🚀 Draft created! Launching your email client to send to <strong>affsheenasif@gmail.com</strong>...
-                  </div>
+                  <div id="form-feedback" class="d-none mt-3 p-3 rounded-3 font-mono" role="alert"></div>
 
                 </form>
               </div>
@@ -2335,36 +2333,99 @@
       // Run initial computation
       updateCalculator();
 
-      // 2. Interactive Contact Form Mailto Handler
+      // 2. Interactive Contact Form Web3Forms API Handler
       const contactForm = document.getElementById('contact-form');
-      const formAlert = document.getElementById('form-alert');
+      const formSubmitBtn = document.getElementById('form-submit-btn');
+      const formBtnContent = document.getElementById('form-btn-content');
+      const formFeedback = document.getElementById('form-feedback');
 
       if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
           e.preventDefault();
 
-          const name = document.getElementById('form-name')?.value || '';
-          const email = document.getElementById('form-email')?.value || '';
-          const service = document.getElementById('form-service')?.value || '';
-          const message = document.getElementById('form-message')?.value || '';
+          const nameInput = document.getElementById('form-name');
+          const emailInput = document.getElementById('form-email');
+          const serviceInput = document.getElementById('form-service');
+          const messageInput = document.getElementById('form-message');
 
-          const subject = encodeURIComponent(`Project Inquiry (20% Off Rate): [${service}] - ${name}`);
-          const body = encodeURIComponent(
-            `Hello Afsheen,\n\n` +
-            `My name is ${name} (${email}).\n` +
-            `I am interested in hiring you for: ${service}\n\n` +
-            `Project Details / Operational Bottlenecks:\n${message}\n\n` +
-            `Looking forward to hearing from you!\n\n` +
-            `Best regards,\n${name}`
-          );
+          const name = nameInput ? nameInput.value.trim() : '';
+          const email = emailInput ? emailInput.value.trim() : '';
+          const service = serviceInput ? serviceInput.value : '';
+          const message = messageInput ? messageInput.value.trim() : '';
 
-          if (formAlert) {
-            formAlert.classList.remove('d-none');
+          if (!name || !email || !message) {
+            return;
           }
 
-          setTimeout(() => {
-            window.location.href = `mailto:affsheenasif@gmail.com?subject=${subject}&body=${body}`;
-          }, 600);
+          // State 1: Submitting
+          if (formSubmitBtn) formSubmitBtn.disabled = true;
+          if (formBtnContent) {
+            formBtnContent.innerHTML = `
+              <i class="fa-solid fa-circle-notch fa-spin"></i>
+              <span>Transmitting Pipeline Specs...</span>
+            `;
+          }
+          if (formFeedback) {
+            formFeedback.className = 'd-none mt-3 p-3 rounded-3 font-mono';
+            formFeedback.innerHTML = '';
+          }
+
+          const payload = {
+            access_key: "58642704-bea8-4173-9c82-fb81e8b42bdc",
+            name: name,
+            email: email,
+            service: service,
+            message: message,
+            from_name: "Portfolio Direct Lead",
+            subject: "⚡ New High-Value Lead from Portfolio - " + name
+          };
+
+          try {
+            const response = await fetch('https://api.web3Forms.com/submit'.toLowerCase(), {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+
+            if (response.status === 200 && (result.success || result.message === "Form submitted successfully" || result.success === undefined)) {
+              // State 2: Success
+              if (formFeedback) {
+                formFeedback.style.cssText = "background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; backdrop-filter: blur(14px); font-size: 0.85rem;";
+                formFeedback.className = "mt-3 p-3 rounded-3 font-mono d-flex align-items-center gap-2.5";
+                formFeedback.innerHTML = `
+                  <i class="fa-solid fa-circle-check fs-5 text-success flex-shrink-0"></i>
+                  <span>✓ Inquiry Transmitted. Afsheen will review your specifications within 12 hours.</span>
+                `;
+              }
+              contactForm.reset();
+            } else {
+              throw new Error(result.message || 'Transmission failed');
+            }
+          } catch (error) {
+            // State 3: Error
+            if (formFeedback) {
+              formFeedback.style.cssText = "background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #fca5a5; backdrop-filter: blur(14px); font-size: 0.85rem;";
+              formFeedback.className = "mt-3 p-3 rounded-3 font-mono d-flex align-items-center gap-2.5";
+              formFeedback.innerHTML = `
+                <i class="fa-solid fa-triangle-exclamation fs-5 text-danger flex-shrink-0"></i>
+                <span>Direct transmission failed. Please reach out to <a href="mailto:affsheenasif@gmail.com" class="text-white text-decoration-underline fw-bold">affsheenasif@gmail.com</a> directly.</span>
+              `;
+            }
+          } finally {
+            // Re-enable Submit Button
+            if (formSubmitBtn) formSubmitBtn.disabled = false;
+            if (formBtnContent) {
+              formBtnContent.innerHTML = `
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Project Inquiry</span>
+              `;
+            }
+          }
         });
       }
 
