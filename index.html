@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Afsheen Asif — Full-Stack Engineer & Automation Architect</title>
-  <meta name="description" content="Portfolio of Afsheen Asif: Full-Stack Engineer and Automation Architect building high-converting web platforms, autonomous n8n workflows, and production AI agents." />
+  <title>Afsheen Asif — Silicon Valley-Grade Full-Stack Engineer & Automation Architect</title>
+  <meta name="description" content="Portfolio of Afsheen Asif: Elite Full-Stack Engineer & Automation Architect building autonomous n8n workflows, Next.js web platforms, and production AI agents." />
   <meta name="author" content="Afsheen Asif" />
   <meta property="og:title" content="Afsheen Asif — Full-Stack Engineer & Automation Architect" />
-  <meta property="og:description" content="High-Converting Web Platforms, Autonomous Workflows & Production AI Agents." />
+  <meta property="og:description" content="Autonomous n8n Workflows, Next.js Web Platforms & Production AI Agents." />
   <meta property="og:type" content="website" />
 
   <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Bootstrap 5.3.3 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -22,17 +22,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    /* Global Root Variables & Theme Tokens */
+    /* Global Root Tokens & Silicon Valley Cyber Aesthetics */
     :root {
       --bg-dark: #030712;
       --card-dark: #0f172a;
       --card-secondary: #1e293b;
       --border-dark: #334155;
-      --border-light: rgba(255, 255, 255, 0.1);
+      --border-purple: rgba(139, 92, 246, 0.28);
       --accent-indigo: #6366f1;
-      --accent-indigo-hover: #4f46e5;
       --accent-blue: #3b82f6;
       --accent-purple: #a855f7;
+      --accent-violet: #8b5cf6;
       --accent-cyan: #06b6d4;
       --accent-teal: #0d9488;
       --accent-emerald: #10b981;
@@ -56,11 +56,12 @@
       overflow-x: hidden;
       min-height: 100vh;
       line-height: 1.6;
+      position: relative;
     }
 
     /* Selection Highlighting */
     ::selection {
-      background: var(--accent-indigo);
+      background: var(--accent-purple);
       color: #ffffff;
     }
 
@@ -77,12 +78,19 @@
       border: 1px solid #334155;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent-indigo);
+      background: var(--accent-purple);
     }
 
     /* Typography Utilities */
     .font-display { font-family: var(--font-display); }
     .font-mono { font-family: var(--font-mono); }
+
+    /* Ultra-clean Gradient Text Clips (White to Electric Violet) */
+    .text-gradient-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 35%, #c084fc 70%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .text-gradient-primary {
       background: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #c084fc 100%);
@@ -90,82 +98,61 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .text-gradient-blue {
-      background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+    .text-gradient-neon {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f43f5e 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .text-gradient-purple {
-      background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Background Mesh & Grid Patterns */
-    .bg-grid-overlay {
-      background-size: 40px 40px;
+    /* Cyber-grid background pattern with CSS radial gradients */
+    .bg-cyber-canvas {
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    }
-
-    .ambient-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      pointer-events: none;
-      z-index: 0;
+        radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.08) 25%, transparent 60%),
+        radial-gradient(circle at 100% 40%, rgba(168, 85, 247, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 0% 70%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
     }
 
     /* Glassmorphic Cyber Cards */
     .glass-card {
       background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border: 1px solid var(--border-dark);
-      border-radius: 1rem;
+      border-radius: 1.1rem;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .glass-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(99, 102, 241, 0.5);
-      box-shadow: 0 16px 32px -10px rgba(99, 102, 241, 0.25);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 20px 40px -10px rgba(168, 85, 247, 0.22);
     }
 
-    /* Glow Effects */
-    .glow-indigo {
-      box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.5);
-    }
-    .glow-blue {
-      box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
-    }
-    .glow-purple {
-      box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.5);
-    }
-
-    /* Custom Buttons */
-    .btn-gradient-primary {
-      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
+    /* Animated Gradient Border Button */
+    .btn-gradient-glow {
+      position: relative;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
       color: #ffffff;
-      font-weight: 600;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 0.75rem;
-      padding: 0.75rem 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+      font-weight: 700;
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      z-index: 1;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 20px -3px rgba(139, 92, 246, 0.5);
     }
 
-    .btn-gradient-primary:hover {
-      background: linear-gradient(135deg, #4338ca 0%, #4f46e5 50%, #7c3aed 100%);
+    .btn-gradient-glow:hover {
       color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 30px 2px rgba(168, 85, 247, 0.7);
     }
 
     .btn-outline-cyber {
@@ -173,8 +160,8 @@
       color: #e2e8f0;
       font-weight: 600;
       border: 1px solid var(--border-dark);
-      border-radius: 0.75rem;
-      padding: 0.75rem 1.5rem;
+      border-radius: 0.8rem;
+      padding: 0.75rem 1.4rem;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
@@ -183,10 +170,27 @@
     }
 
     .btn-outline-cyber:hover {
-      background: rgba(30, 41, 59, 0.9);
+      background: rgba(30, 41, 59, 0.95);
       color: #ffffff;
-      border-color: #64748b;
+      border-color: #8b5cf6;
+      box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.4);
       transform: translateY(-2px);
+    }
+
+    .btn-outline-arch {
+      background: rgba(139, 92, 246, 0.08);
+      color: #d8b4fe;
+      font-weight: 600;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 0.65rem;
+      transition: all 0.25s ease;
+    }
+
+    .btn-outline-arch:hover {
+      background: rgba(139, 92, 246, 0.22);
+      color: #ffffff;
+      border-color: #a855f7;
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.35);
     }
 
     /* Custom Range Sliders */
@@ -207,24 +211,24 @@
       height: 22px;
       width: 22px;
       border-radius: 50%;
-      background: var(--accent-indigo);
+      background: var(--accent-purple);
       cursor: pointer;
       border: 3px solid #0f172a;
-      box-shadow: 0 0 12px rgba(99, 102, 241, 0.8);
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.9);
       transition: transform 0.15s ease, background-color 0.15s ease;
     }
 
     input[type=range]::-webkit-slider-thumb:hover {
-      transform: scale(1.2);
-      background: #818cf8;
-      box-shadow: 0 0 16px rgba(129, 140, 248, 1);
+      transform: scale(1.22);
+      background: #c084fc;
+      box-shadow: 0 0 20px rgba(192, 132, 252, 1);
     }
 
-    /* Custom Navbar Overrides */
+    /* Navbar Overrides */
     .navbar-dark-cyber {
-      background: rgba(3, 7, 18, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(3, 7, 18, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(51, 65, 85, 0.7);
     }
 
@@ -237,10 +241,25 @@
     }
 
     .nav-link-cyber:hover {
-      color: #818cf8 !important;
+      color: #c084fc !important;
     }
 
-    /* Badges & Pills */
+    /* Neon & Offer Badges */
+    .badge-neon-offer {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(168, 85, 247, 0.2) 100%);
+      border: 1px solid rgba(244, 63, 94, 0.5);
+      color: #fecdd3;
+      box-shadow: 0 0 25px -4px rgba(244, 63, 94, 0.4);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.55rem 1.2rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     .badge-cyber-indigo {
       background: rgba(99, 102, 241, 0.15);
       color: #a5b4fc;
@@ -263,49 +282,51 @@
       font-weight: 500;
     }
 
-    /* Research Snapshot Specific Styles (Exact Crisp White Card Contrast) */
+    /* Dark Glassmorphic Case Study Snapshot (NO Solid White) */
     .snapshot-container {
       background: #0b0f19;
       border: 1px solid #334155;
       border-radius: 1.25rem;
       overflow: hidden;
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.85);
     }
 
     .snapshot-header-banner {
       background: linear-gradient(135deg, #7e22ce 0%, #6366f1 50%, #9333ea 100%);
-      padding: 1.1rem 1.75rem;
+      padding: 1.2rem 1.8rem;
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .snapshot-white-card {
-      background: #ffffff;
-      color: #0f172a;
-      border-radius: 0.875rem;
-      padding: 1.5rem;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(226, 232, 240, 0.8);
+    .snapshot-dark-glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: 1rem;
+      padding: 1.6rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .snapshot-white-card:hover {
+    .snapshot-dark-glass-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 30px -5px rgba(0, 0, 0, 0.45);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 16px 32px -8px rgba(168, 85, 247, 0.3);
     }
 
     .badge-circle-teal {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #ccfbf1;
-      color: #0d9488;
+      background: rgba(13, 148, 136, 0.18);
+      border: 1px solid rgba(20, 184, 166, 0.4);
+      color: #2dd4bf;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -316,8 +337,9 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #dbeafe;
-      color: #2563eb;
+      background: rgba(37, 99, 235, 0.18);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #60a5fa;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -328,27 +350,52 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #f3e8ff;
-      color: #9333ea;
+      background: rgba(147, 51, 234, 0.18);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.25rem;
     }
+
+    /* Modal Custom Styling */
+    .modal-cyber .modal-content {
+      background: #0b0f19;
+      border: 1px solid #334155;
+      border-radius: 1.25rem;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(168, 85, 247, 0.25);
+      color: #f8fafc;
+    }
+
+    .modal-cyber .modal-header {
+      border-bottom: 1px solid #1e293b;
+      padding: 1.25rem 1.75rem;
+    }
+
+    .modal-cyber .modal-footer {
+      border-top: 1px solid #1e293b;
+      padding: 1.25rem 1.75rem;
+    }
+
+    .node-pill {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 0.75rem;
+      padding: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .node-pill:hover {
+      border-color: rgba(168, 85, 247, 0.6);
+      background: #141e33;
+    }
   </style>
 </head>
 
-<body>
+<body class="bg-cyber-canvas">
 
-  <!-- Ambient Light Orbs -->
-  <div class="position-fixed top-0 start-0 w-100 h-100 overflow-hidden pointer-events-none" style="z-index: 0;">
-    <div class="ambient-orb" style="top: -100px; left: -100px; width: 450px; height: 450px; background: rgba(99, 102, 241, 0.12);"></div>
-    <div class="ambient-orb" style="top: 35%; right: -150px; width: 500px; height: 500px; background: rgba(168, 85, 247, 0.08);"></div>
-    <div class="ambient-orb" style="bottom: 50px; left: 25%; width: 400px; height: 400px; background: rgba(59, 130, 246, 0.08);"></div>
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-grid-overlay opacity-50"></div>
-  </div>
-
-  <!-- 1. STICKY HEADER / NAVIGATION (BOOTSTRAP 5) -->
+  <!-- 1. STICKY HEADER / NAVIGATION -->
   <header class="sticky-top navbar-dark-cyber" style="z-index: 1030;">
     <nav class="navbar navbar-expand-lg py-3">
       <div class="container">
@@ -356,20 +403,20 @@
         <!-- Brand Logo & Tagline -->
         <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="#">
           <div class="position-relative d-flex align-items-center justify-content-center" 
-               style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #3b82f6, #9333ea); padding: 1.5px; box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);">
+               style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); padding: 1.5px; box-shadow: 0 0 20px rgba(168, 85, 247, 0.45);">
             <div class="w-100 h-100 rounded-3 d-flex align-items-center justify-content-center" style="background: #030712;">
-              <span class="font-display fw-bold text-gradient-primary" style="font-size: 1.15rem;">AA</span>
+              <span class="font-display fw-black text-gradient-hero" style="font-size: 1.2rem;">AA</span>
             </div>
             <!-- Glowing Blue Dot -->
             <span class="position-absolute bottom-0 end-0 translate-middle p-1 rounded-circle" 
-                  style="background: #38bdf8; box-shadow: 0 0 8px #38bdf8; width: 9px; height: 9px; margin-bottom: -2px; margin-right: -2px;"></span>
+                  style="background: #38bdf8; box-shadow: 0 0 10px #38bdf8; width: 10px; height: 10px; margin-bottom: -2px; margin-right: -2px;"></span>
           </div>
           <div>
-            <div class="d-flex align-items-center gap-1">
-              <span class="font-display fw-bolder text-white tracking-tight" style="font-size: 1.25rem; letter-spacing: -0.02em;">AFSHEEN ASIF.</span>
-              <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <div class="d-flex align-items-center gap-1.5">
+              <span class="font-display fw-bolder text-white tracking-tight" style="font-size: 1.28rem; letter-spacing: -0.02em;">AFSHEEN ASIF.</span>
+              <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 10px #3b82f6;"></span>
             </div>
-            <div class="font-mono text-uppercase" style="font-size: 0.68rem; color: #94a3b8; letter-spacing: 0.05em;">
+            <div class="font-mono text-uppercase" style="font-size: 0.68rem; color: #94a3b8; letter-spacing: 0.06em;">
               Full-Stack Engineer & Automation Architect
             </div>
           </div>
@@ -384,7 +431,7 @@
         <div class="collapse navbar-collapse" id="navbarMain">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber" href="#services">Services</a>
+              <a class="nav-link nav-link-cyber" href="#services">Services & Pricing</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-cyber" href="#case-study">Case Study</a>
@@ -392,8 +439,11 @@
             <li class="nav-item">
               <a class="nav-link nav-link-cyber d-flex align-items-center gap-1" href="#roi-calculator">
                 <span>ROI Calculator</span>
-                <span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.65rem; font-family: var(--font-mono);">LIVE</span>
+                <span class="badge" style="background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); font-size: 0.65rem; font-family: var(--font-mono);">LIVE</span>
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-cyber" href="#reviews">Reviews</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-cyber" href="#contact">Contact</a>
@@ -406,7 +456,7 @@
               Contact
             </a>
             <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-               class="btn btn-gradient-primary btn-sm px-4 py-2 text-nowrap">
+               class="btn-gradient-glow btn-sm px-4 py-2 text-nowrap" style="font-size: 0.85rem;">
               <span>Hire on Fiverr</span>
               <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
             </a>
@@ -431,16 +481,16 @@
           <div class="col-lg-7 text-center text-lg-start">
             
             <!-- Badge -->
-            <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4" 
-                 style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); color: #c7d2fe; font-size: 0.85rem; font-weight: 500;">
-              <span class="d-inline-block rounded-circle" style="width: 8px; height: 8px; background: #818cf8; box-shadow: 0 0 8px #818cf8;"></span>
+            <div class="d-inline-flex align-items-center gap-2 px-3.5 py-2 rounded-pill mb-4" 
+                 style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.35); color: #e9d5ff; font-size: 0.85rem; font-weight: 600;">
+              <span class="d-inline-block rounded-circle" style="width: 8px; height: 8px; background: #c084fc; box-shadow: 0 0 10px #c084fc;"></span>
               <span>⚡ Next.js Full-Stack Architecture & Autonomous n8n Systems</span>
             </div>
 
-            <!-- Headline -->
-            <h1 class="font-display fw-bolder text-white mb-3" style="font-size: calc(1.8rem + 1.8vw); line-height: 1.15; letter-spacing: -0.02em;">
+            <!-- Headline with Ultra-Clean Gradient Text Clip -->
+            <h1 class="font-display fw-bolder text-white mb-3" style="font-size: calc(1.85rem + 1.8vw); line-height: 1.15; letter-spacing: -0.02em;">
               Hi, I'm <span class="text-white">Afsheen Asif</span>.<br />
-              I Build <span class="text-gradient-primary">High-Converting Web Platforms</span>, Autonomous Workflows & Production AI Agents.
+              I Build <span class="text-gradient-hero">High-Converting Web Platforms</span>, Autonomous Workflows & Production AI Agents.
             </h1>
 
             <!-- Sub-headline -->
@@ -450,25 +500,25 @@
 
             <!-- Metrics Pills -->
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mb-4 font-mono" style="font-size: 0.8rem;">
-              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
                 <i class="fa-solid fa-bolt text-warning me-1"></i> 450+ Automated Flows
               </div>
-              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
                 <i class="fa-solid fa-gauge-high text-success me-1"></i> 99.9% Uptime SLA
               </div>
-              <div class="px-3 py-1 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: #e2e8f0;">
                 <i class="fa-solid fa-clock-rotate-left text-info me-1"></i> &gt;10,000 Hrs Reclaimed
               </div>
             </div>
 
             <!-- Action Buttons -->
             <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3 pt-2">
-              <a href="#roi-calculator" class="btn btn-gradient-primary px-4 py-3 w-100 w-sm-auto">
+              <a href="#roi-calculator" class="btn-gradient-glow px-4 py-3 w-100 w-sm-auto justify-content-center">
                 <i class="fa-solid fa-calculator"></i>
                 <span>Calculate ROI</span>
               </a>
-              <a href="#services" class="btn btn-outline-cyber px-4 py-3 w-100 w-sm-auto">
-                <span>Explore Services</span>
+              <a href="#services" class="btn btn-outline-cyber px-4 py-3 w-100 w-sm-auto justify-content-center">
+                <span>Explore Services & 20% Off Rates</span>
                 <i class="fa-solid fa-arrow-down fs-6"></i>
               </a>
             </div>
@@ -477,9 +527,9 @@
             <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mt-4 text-muted" style="font-size: 0.8rem;">
               <span class="text-success"><i class="fa-solid fa-circle-check"></i> Verified Fiverr Professional</span>
               <span>•</span>
-              <span>Fast 24-Hour Turnaround</span>
+              <span>Global Remote (Full US/EU Overlap)</span>
               <span>•</span>
-              <span>Custom Sandbox Architecture</span>
+              <span>Production SLA</span>
             </div>
 
           </div>
@@ -489,8 +539,8 @@
             <div class="position-relative mx-auto" style="max-width: 480px;">
               
               <!-- Backing Glow -->
-              <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 rounded-4 glow-indigo" 
-                   style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.15)); filter: blur(30px); z-index: -1;"></div>
+              <div class="position-absolute top-50 start-50 translate-middle w-100 h-100 rounded-4" 
+                   style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.2)); filter: blur(35px); z-index: -1;"></div>
 
               <!-- Terminal Component -->
               <div class="rounded-4 overflow-hidden shadow-lg" style="background: #0b0f19; border: 1px solid #334155;">
@@ -510,7 +560,7 @@
                   </div>
                 </div>
 
-                <!-- Terminal Body / Visual Node Flow -->
+                <!-- Terminal Body -->
                 <div class="p-3 font-mono" style="font-size: 0.78rem;">
                   
                   <div class="d-flex justify-content-between text-muted pb-2 mb-3 border-bottom border-dark-subtle" style="font-size: 0.7rem; border-color: #1e293b !important;">
@@ -547,7 +597,7 @@
                         <div class="text-muted" style="font-size: 0.68rem;">GPT-4o Vector Lead Scoring</div>
                       </div>
                     </div>
-                    <span class="badge bg-purple bg-opacity-25 text-white" style="background: rgba(168, 85, 247, 0.2); font-size: 0.65rem;">99.4% Match</span>
+                    <span class="badge font-mono text-white" style="background: rgba(168, 85, 247, 0.25); font-size: 0.65rem;">99.4% Match</span>
                   </div>
 
                   <div class="text-center my-1 text-secondary" style="font-size: 0.7rem;">
@@ -587,7 +637,7 @@
     </section>
 
 
-    <!-- 3. CASE STUDY / RESEARCH SNAPSHOT SECTION (EXACT REFERENCE LAYOUT) -->
+    <!-- 3. CASE STUDY / RESEARCH SNAPSHOT SECTION (SLEEK DARK GLASSMORPHIC CARDS) -->
     <section id="case-study" class="py-5 position-relative">
       <div class="container py-lg-4">
         
@@ -604,7 +654,7 @@
           </p>
         </div>
 
-        <!-- Snapshot Structured Component -->
+        <!-- Snapshot Structured Component Container -->
         <div class="snapshot-container mx-auto" style="max-width: 960px;">
           
           <!-- Violet/Purple Top Banner -->
@@ -619,19 +669,19 @@
               </h3>
             </div>
             <div class="d-none d-sm-block">
-              <span class="badge rounded-pill px-3 py-1.5 font-mono" style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.7rem;">
+              <span class="badge rounded-pill px-3 py-1.5 font-mono" style="background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.7rem;">
                 <i class="fa-solid fa-circle text-success me-1" style="font-size: 0.5rem;"></i> Verified Case Study
               </span>
             </div>
           </div>
 
-          <!-- 3 Distinct Clean White / Light Cards in a Row -->
+          <!-- 3 Distinct Sleek Dark Glassmorphic Cards (No Solid White) -->
           <div class="p-4 p-md-5" style="background: #070d19;">
             <div class="row g-4">
               
               <!-- Card 1: COMPANY -->
               <div class="col-md-4">
-                <div class="snapshot-white-card">
+                <div class="snapshot-dark-glass-card">
                   <div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                       <!-- Circular Badge (Teal tone) -->
@@ -639,18 +689,18 @@
                         <i class="fa-solid fa-building"></i>
                       </div>
                       <div>
-                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #0d9488; letter-spacing: 0.05em;">COMPANY</div>
-                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Corner Bakery Co.</h4>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #2dd4bf; letter-spacing: 0.05em;">COMPANY</div>
+                        <h4 class="font-display fw-bold mb-0 text-white" style="font-size: 1.05rem;">Corner Bakery Co.</h4>
                       </div>
                     </div>
                     
-                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                    <p class="mb-0" style="font-size: 0.88rem; line-height: 1.6; color: #cbd5e1;">
                       Multi-location bakery chain expanding online catering, requiring automated reservation and order intake.
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Scale: 12 Locations</span>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(51, 65, 85, 0.7) !important;">
+                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #2dd4bf; border: 1px solid rgba(20, 184, 166, 0.3); font-size: 0.7rem;">Scale: 12 Locations</span>
                     <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
                   </div>
                 </div>
@@ -658,7 +708,7 @@
 
               <!-- Card 2: AUDIENCE -->
               <div class="col-md-4">
-                <div class="snapshot-white-card">
+                <div class="snapshot-dark-glass-card">
                   <div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                       <!-- Circular Badge (Blue tone) -->
@@ -666,18 +716,18 @@
                         <i class="fa-solid fa-users"></i>
                       </div>
                       <div>
-                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #2563eb; letter-spacing: 0.05em;">AUDIENCE</div>
-                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Catering Buyers</h4>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #60a5fa; letter-spacing: 0.05em;">AUDIENCE</div>
+                        <h4 class="font-display fw-bold mb-0 text-white" style="font-size: 1.05rem;">Catering Buyers</h4>
                       </div>
                     </div>
                     
-                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                    <p class="mb-0" style="font-size: 0.88rem; line-height: 1.6; color: #cbd5e1;">
                       Corporate event coordinators and local catering clients seeking rapid, friction-free mobile order checkout.
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Target: B2B & Retail</span>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(51, 65, 85, 0.7) !important;">
+                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); font-size: 0.7rem;">Target: B2B & Retail</span>
                     <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
                   </div>
                 </div>
@@ -685,7 +735,7 @@
 
               <!-- Card 3: THEME -->
               <div class="col-md-4">
-                <div class="snapshot-white-card">
+                <div class="snapshot-dark-glass-card">
                   <div>
                     <div class="d-flex align-items-center gap-3 mb-3">
                       <!-- Circular Badge (Purple tone) -->
@@ -693,18 +743,18 @@
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                       </div>
                       <div>
-                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #9333ea; letter-spacing: 0.05em;">THEME</div>
-                        <h4 class="font-display fw-bold mb-0 text-dark" style="font-size: 1.05rem;">Speed & Automation</h4>
+                        <div class="font-mono fw-bold text-uppercase" style="font-size: 0.72rem; color: #c084fc; letter-spacing: 0.05em;">THEME</div>
+                        <h4 class="font-display fw-bold mb-0 text-white" style="font-size: 1.05rem;">Speed & Automation</h4>
                       </div>
                     </div>
                     
-                    <p class="text-secondary mb-0" style="font-size: 0.88rem; line-height: 1.55; color: #334155 !important;">
+                    <p class="mb-0" style="font-size: 0.88rem; line-height: 1.6; color: #cbd5e1;">
                       Ultra-fast responsive interface, sub-second Edge load speeds, and automated n8n notifications pushed to staff.
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: #e2e8f0 !important;">
-                    <span class="badge bg-light text-secondary border font-mono" style="font-size: 0.7rem;">Stack: Next.js + n8n</span>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(51, 65, 85, 0.7) !important;">
+                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); font-size: 0.7rem;">Stack: Next.js + n8n</span>
                     <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
                   </div>
                 </div>
@@ -750,7 +800,7 @@
           
           <!-- Left: Sliders Column -->
           <div class="col-lg-7">
-            <div class="glass-card p-4 p-md-5 h-100 d-flex flex-col justify-content-between">
+            <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
               
               <div>
                 
@@ -760,7 +810,7 @@
                     <label for="hours-slider" class="form-label fw-semibold text-white mb-0" style="font-size: 0.95rem;">
                       <i class="fa-solid fa-clock text-primary me-2"></i> Manual Hours Spent per Week
                     </label>
-                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.9rem;">
+                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); font-size: 0.9rem;">
                       <span id="hours-val">26</span> <span style="font-size: 0.75rem; font-weight: normal; color: #94a3b8;">hrs/wk</span>
                     </div>
                   </div>
@@ -796,10 +846,12 @@
                     <i class="fa-solid fa-layer-group text-info me-2"></i> Target Operations Area
                   </label>
                   <select id="ops-area-select" class="form-select bg-dark text-white border-secondary p-3" style="border-color: #334155 !important; border-radius: 0.75rem; font-size: 0.9rem;">
-                    <option value="lead-crm" selected>Lead Capture & CRM Sync (Autonomous qualification & pipeline sync)</option>
-                    <option value="support-chat">Customer Support & Chatbot Triage (RAG AI doc triage & live escalations)</option>
-                    <option value="ecom-flow">E-commerce Order Flow (Inventory multi-store sync & notification triggers)</option>
-                    <option value="fullstack-ai">Full-Stack AI Stack (Custom Next.js portal + self-hosted n8n engine)</option>
+                    <option value="n8n-auto" selected>n8n Automation & Workflows (Pipeline syncing & webhook routing)</option>
+                    <option value="nextjs-web">React & Next.js Web Platforms (High-converting SSR portals)</option>
+                    <option value="ai-agents">AI Custom Chatbots & Agents (RAG documentation & triage)</option>
+                    <option value="seo-speed">Technical SEO & Web Speed (Sub-second Edge optimization)</option>
+                    <option value="docker-cloud">Docker & Cloud Deployment (Containerized VPS orchestrations)</option>
+                    <option value="social-pipe">Social & Pipeline Automation (Multi-channel growth pipelines)</option>
                   </select>
                 </div>
 
@@ -819,18 +871,18 @@
             <div class="d-flex flex-column justify-content-between h-100 gap-4">
               
               <!-- Main Annual Savings Card -->
-              <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden glow-indigo" 
-                   style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.4);">
+              <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden" 
+                   style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%); border: 1px solid rgba(168, 85, 247, 0.45); box-shadow: 0 0 30px -5px rgba(168, 85, 247, 0.35);">
                 
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <span class="font-mono text-uppercase fw-semibold text-primary-emphasis" style="font-size: 0.75rem; letter-spacing: 0.05em;">
+                  <span class="font-mono text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.05em; color: #d8b4fe;">
                     <i class="fa-solid fa-vault me-1"></i> Projected Annual Cost Savings
                   </span>
                   <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25 font-mono" style="font-size: 0.68rem;">HIGH ROI</span>
                 </div>
 
                 <div class="font-display fw-bolder text-white mb-2 d-flex align-items-baseline gap-1" style="font-size: calc(2.2rem + 1.2vw); letter-spacing: -0.03em;">
-                  <span class="text-success">$</span><span id="savings-display" class="text-gradient-primary">45,630</span>
+                  <span class="text-success">$</span><span id="savings-display" class="text-gradient-hero">45,630</span>
                 </div>
 
                 <p class="text-muted mb-0" style="font-size: 0.82rem;">
@@ -861,7 +913,7 @@
 
               <!-- CTA Button -->
               <div>
-                <a href="#contact" class="btn btn-gradient-primary w-100 py-3 d-flex justify-content-center align-items-center gap-2 text-decoration-none">
+                <a href="#contact" class="btn-gradient-glow w-100 py-3 d-flex justify-content-center align-items-center gap-2 text-decoration-none" style="font-size: 1rem;">
                   <span>Build This Workflow Now</span>
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -876,27 +928,32 @@
     </section>
 
 
-    <!-- 5. SERVICES GRID (MATCHING AFSHEEN'S FIVERR GIGS) -->
+    <!-- 5. SERVICES & PRICING GRID (OVERHAULED 20% OFF MARKET RATES) -->
     <section id="services" class="py-5 position-relative">
       <div class="container py-lg-4">
         
-        <!-- Section Title Header -->
-        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
-          <div class="badge badge-cyber-indigo mb-2">
-            <i class="fa-solid fa-cubes me-1"></i> VERIFIED GIG OFFERINGS
+        <!-- Section Header with Neon Discount Badge -->
+        <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+          
+          <!-- Neon 20% Off Offer Badge -->
+          <div class="mb-3">
+            <span class="badge-neon-offer">
+              <span>🔥 Direct Engagement Offer: 20% Below Market Standard</span>
+            </span>
           </div>
+
           <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
-            High-Performance Engineering Services
+            High-Performance Engineering Services & Pricing
           </h2>
           <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
-            Order directly via Fiverr with escrow buyer protection or engage directly for custom sprint contracts.
+            Order securely on Fiverr with escrow protection or click <strong class="text-white">Architecture Snapshot</strong> to inspect the technical blueprint.
           </p>
         </div>
 
-        <!-- 6 Services Cards Grid -->
+        <!-- 6 Overhauled Services Cards Grid -->
         <div class="row g-4">
           
-          <!-- Service 1: n8n Automation AI Agents & Workflow -->
+          <!-- Service 1: n8n Automation & Workflows -->
           <div class="col-md-6 col-lg-4">
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
@@ -905,16 +962,17 @@
                     <i class="fa-solid fa-diagram-project fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$490</span>
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$490</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$390</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  n8n Automation AI Agents & Workflow
+                  n8n Automation & Workflows
                 </h3>
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  Lead generation pipelines, autonomous AI research, multi-step webhooks, and self-hosted Docker orchestrations.
+                  Multi-step webhook integrations, CRM sync, autonomous lead routing, and self-hosted Docker workflows.
                 </p>
 
                 <!-- Badges -->
@@ -928,13 +986,18 @@
                 <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
                   <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Zero-loss webhook failover</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> CRM & Database synchronization</li>
-                  <li><i class="fa-solid fa-check text-primary me-2"></i> Error monitoring Telegram/Slack bots</li>
+                  <li><i class="fa-solid fa-check text-primary me-2"></i> Slack / Telegram alert dispatch</li>
                 </ul>
               </div>
 
-              <div>
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-1" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-primary"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
                 <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
                   <span>Order on Fiverr</span>
                   <i class="fa-solid fa-arrow-right fs-6"></i>
                 </a>
@@ -942,7 +1005,7 @@
             </div>
           </div>
 
-          <!-- Service 2: React, Next.js & Bootstrap Web Development -->
+          <!-- Service 2: React & Next.js Web Platforms -->
           <div class="col-md-6 col-lg-4">
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
@@ -951,24 +1014,25 @@
                     <i class="fa-solid fa-code fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$1,250</span>
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$1,250</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$990</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  React, Next.js & Bootstrap Web Development
+                  React & Next.js Web Platforms
                 </h3>
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  Fast server-side rendering, responsive dashboards, modern clean code, and API-driven architectures.
+                  Lightning-fast server-rendered web apps, custom client portals, headless CMS, and robust API endpoints.
                 </p>
 
                 <!-- Badges -->
                 <div class="d-flex flex-wrap gap-1.5 mb-3">
-                  <span class="badge badge-cyber-indigo">Next.js</span>
+                  <span class="badge badge-cyber-indigo">Next.js 14</span>
                   <span class="badge badge-cyber-dark">React</span>
-                  <span class="badge badge-cyber-dark">Bootstrap</span>
                   <span class="badge badge-cyber-dark">Tailwind</span>
+                  <span class="badge badge-cyber-dark">Bootstrap</span>
                 </div>
 
                 <!-- Features -->
@@ -979,9 +1043,14 @@
                 </ul>
               </div>
 
-              <div>
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-2" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-info"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
                 <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
                   <span>Order on Fiverr</span>
                   <i class="fa-solid fa-arrow-right fs-6"></i>
                 </a>
@@ -989,7 +1058,7 @@
             </div>
           </div>
 
-          <!-- Service 3: AI Automation & Custom Chatbots -->
+          <!-- Service 3: AI Custom Chatbots & Agents -->
           <div class="col-md-6 col-lg-4">
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
@@ -998,16 +1067,17 @@
                     <i class="fa-solid fa-robot fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$650</span>
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$650</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$520</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  AI Automation & Custom Chatbots
+                  AI Custom Chatbots & Agents
                 </h3>
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  Document retrieval, automated lead booking, and WhatsApp / Discord / Web conversational triage.
+                  Vector retrieval on company documentation, appointment booking, and WhatsApp / Web conversational triage.
                 </p>
 
                 <!-- Badges -->
@@ -1025,9 +1095,14 @@
                 </ul>
               </div>
 
-              <div>
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-3" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-purple" style="color: #c084fc;"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
                 <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
                   <span>Order on Fiverr</span>
                   <i class="fa-solid fa-arrow-right fs-6"></i>
                 </a>
@@ -1035,53 +1110,7 @@
             </div>
           </div>
 
-          <!-- Service 4: Flutter Mobile App Development -->
-          <div class="col-md-6 col-lg-4">
-            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
-              <div>
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3);">
-                    <i class="fa-solid fa-mobile-screen-button fs-5"></i>
-                  </div>
-                  <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$1,450</span>
-                  </div>
-                </div>
-
-                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  Flutter Mobile App Development
-                </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  Cross-platform iOS & Android, offline sync, native speed, and unified reactive UI architectures.
-                </p>
-
-                <!-- Badges -->
-                <div class="d-flex flex-wrap gap-1.5 mb-3">
-                  <span class="badge badge-cyber-indigo">Flutter</span>
-                  <span class="badge badge-cyber-dark">Dart</span>
-                  <span class="badge badge-cyber-dark">Firebase</span>
-                </div>
-
-                <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
-                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Single codebase for App Store & Play Store</li>
-                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Push notifications & auth flows</li>
-                  <li><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Offline local caching (Hive/SQLite)</li>
-                </ul>
-              </div>
-
-              <div>
-                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
-                  <span>Order on Fiverr</span>
-                  <i class="fa-solid fa-arrow-right fs-6"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 5: Technical & Off-Page SEO Systems -->
+          <!-- Service 4: Technical SEO & Web Speed -->
           <div class="col-md-6 col-lg-4">
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
@@ -1090,21 +1119,22 @@
                     <i class="fa-solid fa-magnifying-glass-chart fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$350</span>
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$350</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$280</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  Technical & Off-Page SEO Systems
+                  Technical SEO & Web Speed
                 </h3>
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  Crawl optimization, JSON-LD Schema markup, Lighthouse 99+ audits, and organic authority roadmaps.
+                  Lighthouse 99+ audits, JSON-LD Schema markup, asset compression pipelines, and Core Web Vitals optimization.
                 </p>
 
                 <!-- Badges -->
                 <div class="d-flex flex-wrap gap-1.5 mb-3">
-                  <span class="badge badge-cyber-indigo">SEO</span>
+                  <span class="badge badge-cyber-indigo">Technical SEO</span>
                   <span class="badge badge-cyber-dark">Core Web Vitals</span>
                   <span class="badge badge-cyber-dark">Schema</span>
                 </div>
@@ -1117,9 +1147,14 @@
                 </ul>
               </div>
 
-              <div>
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-5" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-success"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
                 <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
                   <span>Order on Fiverr</span>
                   <i class="fa-solid fa-arrow-right fs-6"></i>
                 </a>
@@ -1127,45 +1162,103 @@
             </div>
           </div>
 
-          <!-- Service 6: Accurate Data Systems & Technical Content -->
+          <!-- Service 5: Docker & Cloud Deployment -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3);">
+                    <i class="fa-brands fa-docker fs-5"></i>
+                  </div>
+                  <div class="text-end">
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$400</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$320</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
+                  </div>
+                </div>
+
+                <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
+                  Docker & Cloud Deployment
+                </h3>
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                  Self-hosted VPS orchestrations, Docker Compose clusters, SSL reverse proxy setup, and automated backup routines.
+                </p>
+
+                <!-- Badges -->
+                <div class="d-flex flex-wrap gap-1.5 mb-3">
+                  <span class="badge badge-cyber-indigo">Docker</span>
+                  <span class="badge badge-cyber-dark">VPS / Hetzner</span>
+                  <span class="badge badge-cyber-dark">Nginx Proxy</span>
+                </div>
+
+                <!-- Features -->
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
+                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Complete Docker compose containerization</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Let's Encrypt SSL & reverse proxy</li>
+                  <li><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Automated volume backups & cron maintenance</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-4" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-cyan" style="color: #22d3ee;"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
+                <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
+                  <span>Order on Fiverr</span>
+                  <i class="fa-solid fa-arrow-right fs-6"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6: Social & Pipeline Automation -->
           <div class="col-md-6 col-lg-4">
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
                   <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">
-                    <i class="fa-solid fa-database fs-5"></i>
+                    <i class="fa-solid fa-share-nodes fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Starting at</span>
-                    <span class="font-display fw-bolder text-white fs-4">$200</span>
+                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-danger opacity-75">$300</del></span>
+                    <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$240</span>
+                    <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-25 font-mono ms-1" style="font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
-                  Accurate Data Systems & Technical Content
+                  Social & Pipeline Automation
                 </h3>
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
-                  High-precision data structuring, technical documentation, content pipelines, and dataset cleansing.
+                  Autonomous social publishing engines, newsletter RSS pipelines, lead scraping, and unified notification feeds.
                 </p>
 
                 <!-- Badges -->
                 <div class="d-flex flex-wrap gap-1.5 mb-3">
-                  <span class="badge badge-cyber-indigo">Data Entry</span>
-                  <span class="badge badge-cyber-dark">Content Systems</span>
-                  <span class="badge badge-cyber-dark">ETL</span>
+                  <span class="badge badge-cyber-indigo">Pipeline AI</span>
+                  <span class="badge badge-cyber-dark">RSS Webhooks</span>
+                  <span class="badge badge-cyber-dark">Airtable</span>
                 </div>
 
                 <!-- Features -->
                 <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: #1e293b !important; color: #cbd5e1;">
-                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> 100% verified data extraction & ETL</li>
-                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Technical API & engineering writing</li>
-                  <li><i class="fa-solid fa-check text-warning me-2"></i> CSV, JSON, PostgreSQL schema migration</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Automated multi-channel content scheduler</li>
+                  <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Airtable / Notion centralized content hub</li>
+                  <li><i class="fa-solid fa-check text-warning me-2"></i> Zero-maintenance webhook dispatch</li>
                 </ul>
               </div>
 
-              <div>
+              <div class="d-flex flex-column gap-2 pt-2">
+                <button type="button" class="btn btn-outline-arch py-2 d-flex justify-content-center align-items-center gap-2" 
+                        data-bs-toggle="modal" data-bs-target="#modal-arch-6" style="font-size: 0.82rem;">
+                  <i class="fa-solid fa-network-wired text-warning"></i>
+                  <span>Architecture Snapshot</span>
+                </button>
                 <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-outline-cyber w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.82rem;">
+                   class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2" style="font-size: 0.85rem;">
                   <span>Order on Fiverr</span>
                   <i class="fa-solid fa-arrow-right fs-6"></i>
                 </a>
@@ -1179,7 +1272,153 @@
     </section>
 
 
-    <!-- 6. CONTACT FORM SECTION -->
+    <!-- 6. CLIENT REVIEWS & ENGINEERING TRUST SECTION -->
+    <section id="reviews" class="py-5 position-relative" style="background: rgba(11, 15, 25, 0.7); border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b;">
+      <div class="container py-lg-4">
+        
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+          <div class="badge badge-cyber-indigo mb-2">
+            <span class="text-warning me-1">★★★★★</span> VERIFIED FEEDBACK
+          </div>
+          <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
+            Verified Enterprise & Agency Feedback
+          </h2>
+          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+            Real-world engineering impact delivered for agencies, scaling e-commerce brands, and global founders.
+          </p>
+        </div>
+
+        <!-- 3 Testimonial Cards Grid -->
+        <div class="row g-4">
+          
+          <!-- Testimonial 1: Founder / Agency Client -->
+          <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.35); font-size: 0.65rem;">
+                    n8n Enterprise Flow
+                  </span>
+                </div>
+
+                <p class="mb-4" style="font-size: 0.9rem; line-height: 1.65; color: #e2e8f0;">
+                  "Afsheen completely restructured our multi-client lead intake. His n8n workflow runs flawlessly 24/7, syncing enriched leads between HubSpot, Stripe, and Google Sheets without a single drop. It directly saves our account managers <strong>25+ hours of painful manual admin</strong> every single week."
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: #1e293b !important;">
+                <div class="d-flex align-items-center gap-2.5">
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                       style="width: 40px; height: 40px; background: linear-gradient(135deg, #4f46e5, #818cf8);">
+                    MV
+                  </div>
+                  <div>
+                    <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">Marcus Vance</div>
+                    <div class="text-muted font-mono" style="font-size: 0.7rem;">Founder, Apex Scale Media</div>
+                  </div>
+                </div>
+                <span class="badge bg-success bg-opacity-20 text-success font-mono" style="font-size: 0.68rem;">
+                  -25h / wk
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: E-commerce Lead -->
+          <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge font-mono" style="background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); font-size: 0.65rem;">
+                    Next.js Web App
+                  </span>
+                </div>
+
+                <p class="mb-4" style="font-size: 0.9rem; line-height: 1.65; color: #e2e8f0;">
+                  "Our previous storefront was sluggish and dropping conversions. Afsheen rebuilt the entire platform in Next.js and Bootstrap with Edge caching. Our page speed score jumped to <strong>Lighthouse 99</strong>, mobile checkout drop-offs plunged by 34%, and his codebase is exceptionally clean."
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: #1e293b !important;">
+                <div class="d-flex align-items-center gap-2.5">
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                       style="width: 40px; height: 40px; background: linear-gradient(135deg, #2563eb, #38bdf8);">
+                    ER
+                  </div>
+                  <div>
+                    <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">Elena Rostova</div>
+                    <div class="text-muted font-mono" style="font-size: 0.7rem;">VP Growth, Horizon Goods</div>
+                  </div>
+                </div>
+                <span class="badge bg-info bg-opacity-20 text-info font-mono" style="font-size: 0.68rem;">
+                  Lighthouse 99
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Tech Lead / Startup Founder -->
+          <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning fs-6">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge font-mono" style="background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); font-size: 0.65rem;">
+                    RAG AI Chatbot
+                  </span>
+                </div>
+
+                <p class="mb-4" style="font-size: 0.9rem; line-height: 1.65; color: #e2e8f0;">
+                  "The custom RAG chatbot Afsheen deployed across our web portal and WhatsApp channel is exceptional. It retrieves accurate technical answers from hundreds of pages of documentation in sub-second time and <strong>auto-books discovery calls seamlessly</strong>. Outstanding engineering quality."
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: #1e293b !important;">
+                <div class="d-flex align-items-center gap-2.5">
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                       style="width: 40px; height: 40px; background: linear-gradient(135deg, #7e22ce, #c084fc);">
+                    DC
+                  </div>
+                  <div>
+                    <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">David Chen</div>
+                    <div class="text-muted font-mono" style="font-size: 0.7rem;">CTO, SynthAI Labs</div>
+                  </div>
+                </div>
+                <span class="badge font-mono" style="color: #c084fc; background: rgba(168, 85, 247, 0.2); font-size: 0.68rem;">
+                  99.4% Triage
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 7. CONTACT FORM SECTION (GLOBAL REMOTE OVERLAP BADGE) -->
     <section id="contact" class="py-5 position-relative">
       <div class="container py-lg-4">
         
@@ -1215,13 +1454,14 @@
                   </div>
                 </div>
 
+                <!-- Global Remote Location Badge with Full US & EU Overlap -->
                 <div class="d-flex align-items-center gap-3">
                   <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 40px; height: 40px; background: #1e293b; color: #10b981;">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-globe"></i>
                   </div>
                   <div>
-                    <span class="text-muted d-block" style="font-size: 0.7rem;">LOCATION</span>
-                    <span class="text-white">Faisalabad, Pakistan (UTC+5)</span>
+                    <span class="text-muted d-block" style="font-size: 0.7rem;">LOCATION & AVAILABILITY</span>
+                    <span class="text-white fw-semibold" style="font-size: 0.82rem;">Global Remote • UTC+5 (Full US & EU Business Hours Overlap)</span>
                   </div>
                 </div>
 
@@ -1230,7 +1470,7 @@
                     <i class="fa-solid fa-bolt"></i>
                   </div>
                   <div>
-                    <span class="text-muted d-block" style="font-size: 0.7rem;">FIVERR</span>
+                    <span class="text-muted d-block" style="font-size: 0.7rem;">FIVERR PROFILE</span>
                     <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none">
                       fiverr.com/users/afsheenasif
                     </a>
@@ -1255,15 +1495,16 @@
                     <input type="email" class="form-control bg-dark text-white border-secondary p-2.5" id="form-email" required placeholder="alex@acmelabs.com" style="border-color: #334155 !important; font-size: 0.9rem;" />
                   </div>
 
+                  <!-- Service Needed Dropdown with Overhauled 20% Off Rates -->
                   <div class="mb-3">
-                    <label for="form-service" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Service Needed</label>
+                    <label for="form-service" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem;">Service Needed (20% Off Offer Active)</label>
                     <select class="form-select bg-dark text-white border-secondary p-2.5" id="form-service" style="border-color: #334155 !important; font-size: 0.9rem;">
-                      <option value="n8n Automation AI Agents & Workflow">n8n Automation AI Agents & Workflow ($490+)</option>
-                      <option value="React, Next.js & Bootstrap Web Development">React, Next.js & Bootstrap Web Development ($1,250+)</option>
-                      <option value="AI Automation & Custom Chatbots">AI Automation & Custom Chatbots ($650+)</option>
-                      <option value="Flutter Mobile App Development">Flutter Mobile App Development ($1,450+)</option>
-                      <option value="Technical & Off-Page SEO Systems">Technical & Off-Page SEO Systems ($350+)</option>
-                      <option value="Accurate Data Systems & Technical Content">Accurate Data Systems & Technical Content ($200+)</option>
+                      <option value="n8n Automation & Workflows">n8n Automation & Workflows — $390 (was $490)</option>
+                      <option value="React & Next.js Web Platforms">React & Next.js Web Platforms — $990 (was $1,250)</option>
+                      <option value="AI Custom Chatbots & Agents">AI Custom Chatbots & Agents — $520 (was $650)</option>
+                      <option value="Technical SEO & Web Speed">Technical SEO & Web Speed — $280 (was $350)</option>
+                      <option value="Docker & Cloud Deployment">Docker & Cloud Deployment — $320 (was $400)</option>
+                      <option value="Social & Pipeline Automation">Social & Pipeline Automation — $240 (was $300)</option>
                       <option value="Custom Engineering Architecture">Custom Engineering Architecture</option>
                     </select>
                   </div>
@@ -1273,7 +1514,7 @@
                     <textarea class="form-control bg-dark text-white border-secondary p-2.5" id="form-message" rows="3" required placeholder="Describe your workflow requirements, APIs to connect, or timelines..." style="border-color: #334155 !important; font-size: 0.9rem; resize: none;"></textarea>
                   </div>
 
-                  <button type="submit" class="btn btn-gradient-primary w-100 py-3 d-flex justify-content-center align-items-center gap-2">
+                  <button type="submit" class="btn-gradient-glow w-100 py-3 d-flex justify-content-center align-items-center gap-2">
                     <i class="fa-solid fa-paper-plane"></i>
                     <span>Send Project Inquiry</span>
                   </button>
@@ -1296,7 +1537,7 @@
   </main>
 
 
-  <!-- 7. FOOTER -->
+  <!-- 8. FOOTER -->
   <footer class="py-5" style="background: #020617; border-top: 1px solid #1e293b; z-index: 10; position: relative;">
     <div class="container">
       
@@ -1306,13 +1547,13 @@
         <div class="col-md-6 text-center text-md-start">
           <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-1">
             <span class="font-display fw-bolder text-white fs-5">AFSHEEN ASIF.</span>
-            <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="d-inline-block rounded-circle" style="width: 6px; height: 6px; background-color: #3b82f6; box-shadow: 0 0 10px #3b82f6;"></span>
           </div>
           <div class="font-mono text-muted" style="font-size: 0.8rem;">
             Afsheen Asif — Autonomous Systems & Engineering
           </div>
           <div class="font-mono text-muted" style="font-size: 0.75rem;">
-            Faisalabad, Pakistan
+            Global Remote • UTC+5 (Full US & EU Business Hours Overlap)
           </div>
         </div>
 
@@ -1367,7 +1608,565 @@
   </footer>
 
 
-  <!-- BOOTSTRAP 5.3.3 BUNDLE JS (Includes Popper) -->
+  <!-- 9. ARCHITECTURE SNAPSHOT MODALS -->
+
+  <!-- Modal 1: n8n Automation -->
+  <div class="modal fade modal-cyber" id="modal-arch-1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-primary" style="width: 32px; height: 32px; background: rgba(99, 102, 241, 0.15);">
+              <i class="fa-solid fa-diagram-project"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel1">
+              Architecture Blueprint: n8n Automation & Workflows ($390)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Step-by-Step Data Pipeline</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary-emphasis font-mono">01 Trigger</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Webhook & Event Ingestion</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">HTTP POST from Stripe, Calendly, or Typeform</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">TLS 1.3</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-primary"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge font-mono" style="color: #c084fc; background: rgba(168, 85, 247, 0.2);">02 Process</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">n8n Docker Engine & GPT-4o Qualification</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">JSON schema normalization, deduplication & AI lead scoring</span>
+                  </div>
+                </div>
+                <span class="text-info font-mono" style="font-size: 0.75rem;">Sub-50ms</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-primary"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">03 Dispatch</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Multi-Target CRM & WhatsApp Sync</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">HubSpot record update, PostgreSQL persistence & Slack emergency alert</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">200 OK</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">n8n Self-Hosted</span>
+                <span class="badge badge-cyber-dark">Docker</span>
+                <span class="badge badge-cyber-dark">OpenAI GPT-4o</span>
+                <span class="badge badge-cyber-dark">PostgreSQL</span>
+                <span class="badge badge-cyber-dark">HubSpot API</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 0.8rem;">
+                <i class="fa-solid fa-bolt me-1"></i> 78% Manual Overhead Cut<br />
+                <i class="fa-solid fa-shield me-1"></i> Zero Data Drop SLA
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Deploy Similar Workflow with Afsheen ($390)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Next.js Web Development -->
+  <div class="modal fade modal-cyber" id="modal-arch-2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-info" style="width: 32px; height: 32px; background: rgba(59, 130, 246, 0.15);">
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel2">
+              Architecture Blueprint: React & Next.js Web Platforms ($990)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Architecture Flow</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-info bg-opacity-25 text-info font-mono">01 Edge</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Cloudflare / Vercel Edge Cache</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Global CDN routing with sub-50ms TTFB</span>
+                  </div>
+                </div>
+                <span class="text-info font-mono" style="font-size: 0.75rem;">Edge SSR</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-info"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary font-mono">02 Core</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Next.js App Router & Server Actions</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Type-safe API routes, React server components, Tailwind & Bootstrap UI</span>
+                  </div>
+                </div>
+                <span class="text-primary font-mono" style="font-size: 0.75rem;">React 18</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-info"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">03 Data</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Supabase / PostgreSQL & Stripe Gateways</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Row-level security auth, webhook listeners & transaction logging</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">Encrypted</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">Next.js 14</span>
+                <span class="badge badge-cyber-dark">React</span>
+                <span class="badge badge-cyber-dark">Bootstrap 5</span>
+                <span class="badge badge-cyber-dark">Tailwind CSS</span>
+                <span class="badge badge-cyber-dark">Supabase / Prisma</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #93c5fd; font-size: 0.8rem;">
+                <i class="fa-solid fa-gauge-high me-1"></i> Lighthouse 99 Performance<br />
+                <i class="fa-solid fa-chart-line me-1"></i> +45% Inbound Conversion
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Deploy Similar Web App with Afsheen ($990)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: AI Chatbots -->
+  <div class="modal fade modal-cyber" id="modal-arch-3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2" style="width: 32px; height: 32px; background: rgba(168, 85, 247, 0.15); color: #c084fc;">
+              <i class="fa-solid fa-robot"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel3">
+              Architecture Blueprint: AI Custom Chatbots & Agents ($520)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Vector RAG Pipeline</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge font-mono" style="color: #c084fc; background: rgba(168, 85, 247, 0.2);">01 Inbound</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Multi-Channel Customer Input</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">WhatsApp Cloud API, Discord, or Web Embedded Widget</span>
+                  </div>
+                </div>
+                <span class="text-purple font-mono" style="color: #c084fc; font-size: 0.75rem;">FastAPI</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-purple" style="color: #c084fc;"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary font-mono">02 Retrieve</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Pinecone / Chroma Vector Retrieval + LangChain</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Cosine semantic match on company PDFs, FAQs & internal documentation</span>
+                  </div>
+                </div>
+                <span class="text-info font-mono" style="font-size: 0.75rem;">99.4% Match</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-purple" style="color: #c084fc;"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">03 Action</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Automated Calendar Booking & Ticket Triage</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Cal.com / Google Calendar API invocation with live conversational context</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">Instant Sync</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">OpenAI GPT-4o</span>
+                <span class="badge badge-cyber-dark">LangChain</span>
+                <span class="badge badge-cyber-dark">Pinecone DB</span>
+                <span class="badge badge-cyber-dark">WhatsApp API</span>
+                <span class="badge badge-cyber-dark">FastAPI</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); color: #d8b4fe; font-size: 0.8rem;">
+                <i class="fa-solid fa-clock me-1"></i> 24/7 Autonomous Triage<br />
+                <i class="fa-solid fa-check-double me-1"></i> Zero Hallucination Guardrails
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Deploy Similar AI Bot with Afsheen ($520)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Docker & Cloud -->
+  <div class="modal fade modal-cyber" id="modal-arch-4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-cyan" style="width: 32px; height: 32px; background: rgba(6, 182, 212, 0.15); color: #22d3ee;">
+              <i class="fa-brands fa-docker"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel4">
+              Architecture Blueprint: Docker & Cloud Deployment ($320)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Cloud Orchestration Pipeline</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge font-mono" style="color: #22d3ee; background: rgba(6, 182, 212, 0.2);">01 VPS Host</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Dedicated Cloud Server Hardening</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">SSH key auth, UFW firewall, fail2ban & non-root user isolation</span>
+                  </div>
+                </div>
+                <span class="font-mono" style="color: #22d3ee; font-size: 0.75rem;">Ubuntu 22.04</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-cyan" style="color: #22d3ee;"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary font-mono">02 Compose</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Docker Compose Cluster (n8n, Postgres, Redis)</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Isolated container networks with persistent volume mappings</span>
+                  </div>
+                </div>
+                <span class="text-info font-mono" style="font-size: 0.75rem;">Docker 24</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-cyan" style="color: #22d3ee;"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">03 Reverse Proxy</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Nginx Proxy Manager + Let's Encrypt SSL</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Automatic TLS renewal, WebSocket headers & DDoS rate limiting</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">A+ Security</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">Docker Compose</span>
+                <span class="badge badge-cyber-dark">Nginx Proxy</span>
+                <span class="badge badge-cyber-dark">Certbot SSL</span>
+                <span class="badge badge-cyber-dark">Hetzner / DigitalOcean</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; font-size: 0.8rem;">
+                <i class="fa-solid fa-server me-1"></i> 99.9% Self-Hosted Uptime<br />
+                <i class="fa-solid fa-shield-halved me-1"></i> Zero Cloud Subscription Lock-in
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Deploy Docker Architecture with Afsheen ($320)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Technical SEO -->
+  <div class="modal fade modal-cyber" id="modal-arch-5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-success" style="width: 32px; height: 32px; background: rgba(16, 185, 129, 0.15);">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel5">
+              Architecture Blueprint: Technical SEO & Web Speed ($280)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">SEO Engine Architecture</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">01 Audit</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Core Web Vitals & Crawl Diagnostics</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Elimination of render-blocking JS, layout shifts (CLS), and long tasks (INP)</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">LCP &lt; 0.8s</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-success"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary font-mono">02 Schema</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">JSON-LD Rich Snippet Generation</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Automated Schema markup for Organizations, Products, FAQs, and Breadcrumbs</span>
+                  </div>
+                </div>
+                <span class="text-primary font-mono" style="font-size: 0.75rem;">JSON-LD Valid</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-success"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-info bg-opacity-25 text-info font-mono">03 Index</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Automated Sitemap & Indexing Webhooks</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Google Search Console API & Bing IndexNow instant notification pipeline</span>
+                  </div>
+                </div>
+                <span class="text-info font-mono" style="font-size: 0.75rem;">Fast Index</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">JSON-LD Schema</span>
+                <span class="badge badge-cyber-dark">Lighthouse CLI</span>
+                <span class="badge badge-cyber-dark">IndexNow API</span>
+                <span class="badge badge-cyber-dark">Cloudflare Workers</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 0.8rem;">
+                <i class="fa-solid fa-chart-line me-1"></i> +140% Indexation Velocity<br />
+                <i class="fa-solid fa-circle-check me-1"></i> Zero Vitals Penalties
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Optimize SEO with Afsheen ($280)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Social & Pipeline Automation -->
+  <div class="modal fade modal-cyber" id="modal-arch-6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-warning" style="width: 32px; height: 32px; background: rgba(245, 158, 11, 0.15);">
+              <i class="fa-solid fa-share-nodes"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel6">
+              Architecture Blueprint: Social & Pipeline Automation ($240)
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <div class="mb-4">
+            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Automated Multi-Channel Pipeline</div>
+            <div class="d-flex flex-column gap-2.5">
+              
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-warning bg-opacity-25 text-warning font-mono">01 Capture</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Content Hub & RSS Webhook Listeners</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Airtable / Notion status updates or blog publishing webhooks</span>
+                  </div>
+                </div>
+                <span class="text-warning font-mono" style="font-size: 0.75rem;">Airtable API</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-warning"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-primary bg-opacity-25 text-primary font-mono">02 Format</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">AI Text Structuring & Media Processing</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">GPT-4o adaptation for LinkedIn, X (Twitter), Discord & Newsletter formats</span>
+                  </div>
+                </div>
+                <span class="text-primary font-mono" style="font-size: 0.75rem;">GPT-4o Polish</span>
+              </div>
+
+              <div class="text-center my-0 text-secondary" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-down text-warning"></i></div>
+
+              <div class="node-pill d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="badge bg-success bg-opacity-25 text-success font-mono">03 Broadcast</span>
+                  <div>
+                    <strong class="text-white d-block" style="font-size: 0.85rem;">Concurrent Scheduled API Broadcast</strong>
+                    <span class="text-muted" style="font-size: 0.72rem;">Direct publishing with UTM tracking parameters and engagement webhook triage</span>
+                  </div>
+                </div>
+                <span class="text-success font-mono" style="font-size: 0.75rem;">Multi-Cast</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="d-flex flex-wrap gap-1.5">
+                <span class="badge badge-cyber-indigo">n8n / Make</span>
+                <span class="badge badge-cyber-dark">Airtable API</span>
+                <span class="badge badge-cyber-dark">OpenAI API</span>
+                <span class="badge badge-cyber-dark">LinkedIn / X APIs</span>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: #fde68a; font-size: 0.8rem;">
+                <i class="fa-solid fa-check me-1"></i> 100% Autonomous Distribution<br />
+                <i class="fa-solid fa-clock me-1"></i> Saves 15+ hrs/mo Marketing Drag
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.fiverr.com/users/afsheenasif" target="_blank" rel="noopener noreferrer" 
+             class="btn-gradient-glow w-100 py-2.5 d-flex justify-content-center align-items-center gap-2">
+            <span>Order Pipeline Automation ($240)</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BOOTSTRAP 5.3.3 BUNDLE JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <!-- VANILLA JAVASCRIPT: ROI CALCULATOR & MAILTO FORM ENGINE -->
@@ -1387,10 +2186,12 @@
       const efficiencyDisplay = document.getElementById('efficiency-display');
 
       const efficiencyMap = {
-        'lead-crm': '+380%',
-        'support-chat': '+420%',
-        'ecom-flow': '+340%',
-        'fullstack-ai': '+510%'
+        'n8n-auto': '+380%',
+        'nextjs-web': '+420%',
+        'ai-agents': '+510%',
+        'seo-speed': '+340%',
+        'docker-cloud': '+400%',
+        'social-pipe': '+360%'
       };
 
       function updateCalculator() {
@@ -1398,7 +2199,7 @@
 
         const hours = parseFloat(hoursSlider.value) || 26;
         const wage = parseFloat(wageSlider.value) || 45;
-        const opsArea = opsAreaSelect ? opsAreaSelect.value : 'lead-crm';
+        const opsArea = opsAreaSelect ? opsAreaSelect.value : 'n8n-auto';
 
         // Update Slider Labels
         if (hoursVal) hoursVal.textContent = hours;
@@ -1443,7 +2244,7 @@
           const service = document.getElementById('form-service')?.value || '';
           const message = document.getElementById('form-message')?.value || '';
 
-          const subject = encodeURIComponent(`Project Inquiry: [${service}] - ${name}`);
+          const subject = encodeURIComponent(`Project Inquiry (20% Off Rate): [${service}] - ${name}`);
           const body = encodeURIComponent(
             `Hello Afsheen,\n\n` +
             `My name is ${name} (${email}).\n` +
@@ -1464,7 +2265,7 @@
       }
 
       // 3. Auto-collapse mobile navbar when clicking navigation links
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-collapse .btn');
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-collapse .btn, .navbar-collapse .btn-gradient-glow');
       const navbarCollapse = document.getElementById('navbarMain');
       if (navbarCollapse) {
         navLinks.forEach(link => {
