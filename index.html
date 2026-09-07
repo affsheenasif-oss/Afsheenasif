@@ -27,20 +27,20 @@
   <style>
     /* Silicon Valley Elite Design Tokens */
     :root {
-      --bg-dark: #030712;
-      --card-bg: rgba(13, 17, 23, 0.7);
-      --card-border: rgba(255, 255, 255, 0.07);
-      --card-border-hover: rgba(121, 40, 202, 0.4);
-      --input-bg: rgba(22, 27, 34, 0.8);
-      --input-border: rgba(255, 255, 255, 0.12);
+      --bg-dark: #020617;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --card-border-hover: rgba(139, 92, 246, 0.5);
+      --input-bg: rgba(15, 23, 42, 0.85);
+      --input-border: rgba(255, 255, 255, 0.14);
       --brand-purple: #7928ca;
       --brand-indigo: #4f46e5;
       --brand-violet: #8b5cf6;
       --brand-cyan: #06b6d4;
       --brand-emerald: #10b981;
       --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-sub: #cbd5e1;
+      --text-muted: #cbd5e1;
+      --text-sub: #e2e8f0;
       --font-main: 'Inter', system-ui, -apple-system, sans-serif;
       --font-display: 'Outfit', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
@@ -53,8 +53,8 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 50%, #020617 100%) fixed;
+      color: #f8fafc;
       font-family: var(--font-main);
       overflow-x: hidden;
       min-height: 100vh;
@@ -73,12 +73,12 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #030712;
+      background: #020617;
     }
     ::-webkit-scrollbar-thumb {
       background: #1e293b;
       border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     ::-webkit-scrollbar-thumb:hover {
       background: var(--brand-purple);
@@ -90,7 +90,7 @@
 
     /* Ultra-clean Gradient Text Clips */
     .text-gradient-hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 30%, #d8b4fe 65%, #a855f7 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 35%, #d8b4fe 70%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -101,34 +101,21 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Ambient Subtle Cyber-Grid Canvas */
-    .bg-cyber-canvas {
-      background-color: #030712;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(121, 40, 202, 0.16) 0%, rgba(79, 70, 229, 0.08) 35%, transparent 70%),
-        radial-gradient(circle at 90% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 45%),
-        radial-gradient(circle at 10% 65%, rgba(79, 70, 229, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 100%, rgba(121, 40, 202, 0.1) 0%, transparent 60%),
-        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
-      background-attachment: fixed;
-    }
-
-    /* Modern Sleek Glass Cards (Ultra-delicate 1px borders) */
+    /* Modern Sleek Glass Cards (Translucent glass with soft ambient drop-shadows) */
     .glass-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1rem;
+      box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.15), 0 0 20px -5px rgba(121, 40, 202, 0.1);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .glass-card:hover {
       transform: translateY(-3px);
-      border-color: var(--card-border-hover);
-      box-shadow: 0 20px 40px -10px rgba(121, 40, 202, 0.18);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 40px -10px rgba(121, 40, 202, 0.28), 0 0 25px -5px rgba(79, 70, 229, 0.2);
     }
 
     /* Silicon Valley Modern CTA Button (Primary) */
@@ -162,15 +149,15 @@
 
     /* Silicon Valley Secondary CTA Button (Deep Dark Glass) */
     .btn-sv-secondary {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      color: #f8fafc !important;
+      color: #ffffff !important;
       font-weight: 600;
       font-size: 0.92rem;
       border-radius: 12px;
       padding: 0.75rem 1.4rem;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -181,8 +168,8 @@
     }
 
     .btn-sv-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.35);
       color: #ffffff !important;
       transform: translateY(-2px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -193,19 +180,19 @@
       width: 40px;
       height: 40px;
       border-radius: 10px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: #94a3b8;
+      color: #e2e8f0;
       transition: all 0.25s ease;
       text-decoration: none;
     }
 
     .btn-sv-icon:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
       color: #ffffff;
       transform: translateY(-2px);
     }
@@ -222,8 +209,8 @@
 
     /* Minimalist Fiverr Pill Badge */
     .badge-fiverr-pill {
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
       color: #34d399;
       padding: 0.35rem 0.75rem;
       border-radius: 9999px;
@@ -238,8 +225,8 @@
     }
 
     .badge-fiverr-pill:hover {
-      background: rgba(16, 185, 129, 0.2);
-      border-color: rgba(16, 185, 129, 0.5);
+      background: rgba(16, 185, 129, 0.22);
+      border-color: rgba(16, 185, 129, 0.55);
       color: #6ee7b7;
       transform: translateY(-1px);
     }
@@ -252,7 +239,7 @@
       height: 8px;
       background: #1e293b;
       border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       outline: none;
     }
 
@@ -274,31 +261,141 @@
       background: #c084fc;
     }
 
-    /* Navbar Overrides */
+    /* Modern Navbar Overrides */
     .navbar-dark-cyber {
-      background: rgba(3, 7, 18, 0.85);
+      background: rgba(15, 23, 42, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav-link-cyber {
-      color: #94a3b8 !important;
+    .nav-link-modern {
+      color: #cbd5e1 !important;
+      font-size: 14px;
       font-weight: 500;
-      font-size: 0.92rem;
-      padding: 0.5rem 0.9rem !important;
+      padding: 0.5rem 0.85rem !important;
+      position: relative;
       transition: color 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .nav-link-cyber:hover {
-      color: #c084fc !important;
+    .nav-link-modern:hover {
+      color: #ffffff !important;
+    }
+
+    .nav-link-modern.active {
+      color: #ffffff !important;
+    }
+
+    .nav-link-modern.active::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0.85rem;
+      right: 0.85rem;
+      height: 2px;
+      background: #3b82f6;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.9), 0 0 4px #3b82f6;
+      animation: navActiveGlow 2.5s infinite ease-in-out;
+    }
+
+    @keyframes navActiveGlow {
+      0%, 100% { opacity: 0.85; transform: scaleX(1); }
+      50% { opacity: 1; transform: scaleX(1.06); }
+    }
+
+    /* Client Login Ghost Button */
+    .btn-nav-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0 !important;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 0.45rem 1rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .btn-nav-ghost:hover {
+      color: #ffffff !important;
+      border-color: #94a3b8;
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
+    }
+
+    /* Hire on Fiverr Violet-to-Blue Gradient Pill Button */
+    .btn-nav-fiverr {
+      background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+      color: #ffffff !important;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 9999px;
+      padding: 0.45rem 1.25rem;
+      border: none;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn-nav-fiverr:hover {
+      background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+      color: #ffffff !important;
+      box-shadow: 0 0 28px rgba(99, 102, 241, 0.6);
+      transform: translateY(-1px);
+    }
+
+    /* Multi-Column Minimalist Footer Typography */
+    .footer-col-title {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: var(--font-display);
+      margin-bottom: 1.1rem;
+    }
+
+    .footer-link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-link-item {
+      line-height: 2.2;
+    }
+
+    .footer-link {
+      color: #cbd5e1;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .footer-link:hover {
+      color: #ffffff !important;
+      transform: translateX(2px);
     }
 
     /* Sleek SV Offer Badge */
     .badge-sv-offer {
-      background: linear-gradient(135deg, rgba(121, 40, 202, 0.15) 0%, rgba(79, 70, 229, 0.2) 100%);
-      border: 1px solid rgba(139, 92, 246, 0.35);
-      color: #e9d5ff;
+      background: linear-gradient(135deg, rgba(121, 40, 202, 0.2) 0%, rgba(79, 70, 229, 0.25) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #f1f5f9;
       font-family: var(--font-mono);
       font-size: 0.82rem;
       font-weight: 600;
@@ -312,19 +409,19 @@
 
     .badge-cyber-indigo {
       background: rgba(99, 102, 241, 0.15);
-      color: #a5b4fc;
+      color: #c7d2fe;
       border: 1px solid rgba(99, 102, 241, 0.3);
       font-size: 0.75rem;
       padding: 0.35rem 0.65rem;
       border-radius: 0.375rem;
       font-family: var(--font-mono);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .badge-cyber-dark {
-      background: rgba(255, 255, 255, 0.04);
-      color: #cbd5e1;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       font-size: 0.75rem;
       padding: 0.35rem 0.65rem;
       border-radius: 0.375rem;
@@ -334,11 +431,13 @@
 
     /* Dark Glassmorphic Case Study Snapshot */
     .snapshot-container {
-      background: #0b0f19;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1.25rem;
       overflow: hidden;
-      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.85), 0 0 30px -10px rgba(121, 40, 202, 0.2);
     }
 
     .snapshot-header-banner {
@@ -352,9 +451,9 @@
 
     .snapshot-dark-glass-card {
       background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 1rem;
       padding: 1.6rem;
       display: flex;
@@ -362,17 +461,18 @@
       justify-content: space-between;
       height: 100%;
       color: #f8fafc;
+      box-shadow: 0 10px 25px -10px rgba(79, 70, 229, 0.15);
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     .snapshot-dark-glass-card:hover {
       transform: translateY(-3px);
       border-color: rgba(168, 85, 247, 0.5);
-      box-shadow: 0 16px 32px -8px rgba(121, 40, 202, 0.25);
+      box-shadow: 0 16px 35px -8px rgba(121, 40, 202, 0.3);
     }
 
     .snapshot-dark-glass-card .subtext {
-      color: #94a3b8;
+      color: #e2e8f0;
       font-size: 0.88rem;
       line-height: 1.6;
     }
@@ -381,8 +481,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(13, 148, 136, 0.15);
-      border: 1px solid rgba(20, 184, 166, 0.35);
+      background: rgba(13, 148, 136, 0.18);
+      border: 1px solid rgba(20, 184, 166, 0.4);
       color: #2dd4bf;
       display: flex;
       align-items: center;
@@ -394,8 +494,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(37, 99, 235, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.35);
+      background: rgba(37, 99, 235, 0.18);
+      border: 1px solid rgba(59, 130, 246, 0.4);
       color: #60a5fa;
       display: flex;
       align-items: center;
@@ -407,8 +507,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(147, 51, 234, 0.15);
-      border: 1px solid rgba(168, 85, 247, 0.35);
+      background: rgba(147, 51, 234, 0.18);
+      border: 1px solid rgba(168, 85, 247, 0.4);
       color: #c084fc;
       display: flex;
       align-items: center;
@@ -428,13 +528,13 @@
     }
 
     .form-control-sv::placeholder {
-      color: #64748b !important;
+      color: #94a3b8 !important;
     }
 
     .form-control-sv:focus, .form-select-sv:focus {
       outline: none !important;
       border-color: #6366f1 !important;
-      background: rgba(26, 32, 44, 0.95) !important;
+      background: rgba(30, 41, 59, 0.95) !important;
       box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35) !important;
     }
 
@@ -443,70 +543,65 @@
       position: relative;
       border-radius: 16px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 40px rgba(121, 40, 202, 0.2);
-      background: #0b0f19;
+      background: rgba(15, 23, 42, 0.9);
     }
 
     /* Modal Custom Styling */
     .modal-cyber .modal-content {
-      background: #0b0f19;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 1.25rem;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(121, 40, 202, 0.2);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(121, 40, 202, 0.25);
       color: #f8fafc;
     }
 
     .modal-cyber .modal-header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       padding: 1.25rem 1.75rem;
     }
 
     .modal-cyber .modal-footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding: 1.25rem 1.75rem;
     }
 
     .node-pill {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 0.75rem;
       padding: 0.85rem;
       transition: all 0.2s ease;
     }
 
     .node-pill:hover {
-      border-color: rgba(121, 40, 202, 0.4);
-      background: rgba(20, 30, 51, 0.9);
+      border-color: rgba(121, 40, 202, 0.45);
+      background: rgba(30, 41, 59, 0.9);
     }
   </style>
 </head>
 
-<body class="bg-cyber-canvas">
+<body>
 
   <!-- 1. STICKY HEADER / NAVIGATION -->
   <header class="sticky-top navbar-dark-cyber" style="z-index: 1030;">
     <nav class="navbar navbar-expand-lg py-3">
       <div class="container">
         
-        <!-- Brand Logo & Tagline -->
-        <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="#">
-          <div class="position-relative d-flex align-items-center justify-content-center">
-            <img src="logo.png" alt="Afsheen Asif Logo" class="rounded-3" 
-                 style="width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.6));" />
-            <!-- Glowing Status Dot -->
-            <span class="position-absolute bottom-0 end-0 translate-middle p-1 rounded-circle" 
-                  style="background: #10b981; box-shadow: 0 0 10px #10b981; width: 8px; height: 8px; margin-bottom: -1px; margin-right: -1px;"></span>
+        <!-- Brand (Left): Modern inline SVG tech badge + "AFSHEEN ASIF" -->
+        <a class="navbar-brand d-flex align-items-center gap-2.5 text-decoration-none" href="#">
+          <div class="d-flex align-items-center justify-content-center rounded-3 flex-shrink-0" 
+               style="width: 36px; height: 36px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(59, 130, 246, 0.3) 100%); border: 1px solid rgba(139, 92, 246, 0.45); box-shadow: 0 0 16px rgba(99, 102, 241, 0.35);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div>
-            <div class="d-flex align-items-center gap-1.5">
-              <span class="font-display fw-bolder text-white tracking-tight" style="font-size: 1.25rem; letter-spacing: -0.02em;">AFSHEEN ASIF</span>
-              <span class="d-inline-block rounded-circle" style="width: 5px; height: 5px; background-color: #6366f1; box-shadow: 0 0 8px #6366f1;"></span>
-            </div>
-            <div class="font-mono text-uppercase" style="font-size: 0.65rem; color: #94a3b8; letter-spacing: 0.06em;">
-              Full-Stack Engineer & Automation Architect
-            </div>
-          </div>
+          <span class="font-display fw-bolder text-white tracking-wider" style="font-size: 1.2rem; letter-spacing: 0.04em;">AFSHEEN ASIF</span>
         </a>
 
         <!-- Mobile Toggler -->
@@ -514,47 +609,41 @@
           <i class="fa-solid fa-bars fs-4"></i>
         </button>
 
-        <!-- Navbar Links & Action Buttons -->
+        <!-- Navbar Links & Right Actions -->
         <div class="collapse navbar-collapse" id="navbarMain">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+          <!-- Center Nav Links -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1 align-items-center">
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber" href="#services">Services & Pricing</a>
+              <a class="nav-link nav-link-modern active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber" href="#case-study">Case Study</a>
+              <a class="nav-link nav-link-modern" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber d-flex align-items-center gap-1" href="#roi-calculator">
-                <span>ROI Calculator</span>
-                <span class="badge" style="background: rgba(121, 40, 202, 0.2); color: #d8b4fe; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem; font-family: var(--font-mono);">LIVE</span>
-              </a>
+              <a class="nav-link nav-link-modern" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber" href="#reviews">Reviews</a>
+              <a class="nav-link nav-link-modern" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-cyber" href="#contact">Contact</a>
+              <a class="nav-link nav-link-modern" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-modern" href="#contact">Contact</a>
             </li>
           </ul>
 
-          <!-- Action Buttons & Socials -->
+          <!-- Right Actions -->
           <div class="d-flex align-items-center gap-2.5 mt-3 mt-lg-0">
-            <!-- LinkedIn Minimalist SVG Button -->
-            <a href="https://www.linkedin.com/in/afsheen-asif-6a476a308" target="_blank" rel="noopener noreferrer" 
-               class="btn-sv-icon linkedin" title="LinkedIn Profile" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-              </svg>
+            <!-- Client Login Ghost Button -->
+            <a href="#modal-client-login" data-bs-toggle="modal" class="btn-nav-ghost">
+              <i class="fa-solid fa-lock" style="font-size: 0.75rem;"></i>
+              <span>Client Login</span>
             </a>
 
-            <!-- Contact Secondary CTA -->
-            <a href="#contact" class="btn-sv-secondary px-3 py-1.5" style="font-size: 0.85rem;">
-              Contact
-            </a>
-
-            <!-- Hire on Fiverr Primary CTA -->
+            <!-- Hire on Fiverr Gradient Pill Button -->
             <a href="https://www.fiverr.com/users/afsheenasiff/" target="_blank" rel="noopener noreferrer" 
-               class="btn-sv-primary px-3.5 py-1.5 text-nowrap" style="font-size: 0.85rem;">
+               class="btn-nav-fiverr text-nowrap">
               <span>Hire on Fiverr</span>
               <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
             </a>
@@ -580,7 +669,7 @@
             
             <!-- Badge -->
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-4" 
-                 style="background: rgba(121, 40, 202, 0.12); border: 1px solid rgba(139, 92, 246, 0.3); color: #e9d5ff; font-size: 0.85rem; font-weight: 600;">
+                 style="background: rgba(121, 40, 202, 0.15); border: 1px solid rgba(139, 92, 246, 0.35); color: #f1f5f9; font-size: 0.85rem; font-weight: 600;">
               <span class="d-inline-block rounded-circle" style="width: 7px; height: 7px; background: #c084fc; box-shadow: 0 0 8px #c084fc;"></span>
               <span>⚡ Next.js Full-Stack Architecture & Autonomous n8n Systems</span>
             </div>
@@ -592,19 +681,19 @@
             </h1>
 
             <!-- Sub-headline -->
-            <p class="lead text-secondary mb-4 mx-auto mx-lg-0" style="font-size: 1.1rem; color: #cbd5e1 !important; max-width: 620px;">
+            <p class="lead mb-4 mx-auto mx-lg-0" style="font-size: 1.1rem; color: #e2e8f0 !important; max-width: 620px;">
               Helping businesses and digital agencies eliminate manual operations, optimize technical SEO pipelines, and scale revenue with engineering-grade web solutions.
             </p>
 
             <!-- Metrics Pills -->
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mb-4 font-mono" style="font-size: 0.8rem;">
-              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); color: #f8fafc;">
                 <i class="fa-solid fa-bolt text-warning me-1"></i> 450+ Automated Flows
               </div>
-              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); color: #f8fafc;">
                 <i class="fa-solid fa-gauge-high text-success me-1"></i> 99.9% Uptime SLA
               </div>
-              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #e2e8f0;">
+              <div class="px-3 py-1.5 rounded-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); color: #f8fafc;">
                 <i class="fa-solid fa-clock-rotate-left text-info me-1"></i> &gt;10,000 Hrs Reclaimed
               </div>
             </div>
@@ -622,7 +711,7 @@
             </div>
 
             <!-- Direct Verification Note -->
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mt-4 text-muted font-mono" style="font-size: 0.8rem;">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mt-4 font-mono" style="font-size: 0.8rem; color: #cbd5e1;">
               <span class="text-success"><i class="fa-solid fa-circle-check"></i> Verified Fiverr Professional</span>
               <span>•</span>
               <span>Global Remote (Full US/EU Overlap)</span>
@@ -644,13 +733,13 @@
               <div class="demo-video-wrapper">
                 
                 <!-- Window Header Bar -->
-                <div class="d-flex align-items-center justify-content-between px-3 py-2.5" style="background: rgba(3, 7, 18, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="d-flex align-items-center justify-content-between px-3 py-2.5" style="background: rgba(15, 23, 42, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
                   <div class="d-flex align-items-center gap-1.5">
                     <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: rgba(239, 68, 68, 0.8);"></span>
                     <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: rgba(245, 158, 11, 0.8);"></span>
                     <span class="rounded-circle d-inline-block" style="width: 10px; height: 10px; background: rgba(16, 185, 129, 0.8);"></span>
                   </div>
-                  <div class="font-mono text-muted" style="font-size: 0.72rem;">
+                  <div class="font-mono" style="font-size: 0.72rem; color: #cbd5e1;">
                     <i class="fa-solid fa-play text-primary me-1"></i> Demo: Autonomous Architecture
                   </div>
                   <div class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.65rem;">
@@ -659,12 +748,12 @@
                 </div>
 
                 <!-- Video / Interactive Demo Content -->
-                <div class="position-relative" style="background: #070b14; min-height: 280px;">
+                <div class="position-relative" style="background: rgba(10, 15, 29, 0.95); min-height: 280px;">
                   
                   <!-- Video Component with fallback to High-Tech Animated Demo Simulator -->
                   <div class="p-3 font-mono" style="font-size: 0.78rem;">
                     
-                    <div class="d-flex justify-content-between text-muted pb-2 mb-3 border-bottom" style="font-size: 0.7rem; border-color: rgba(255, 255, 255, 0.08) !important;">
+                    <div class="d-flex justify-content-between pb-2 mb-3 border-bottom" style="font-size: 0.7rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #cbd5e1;">
                       <span>WORKFLOW: <strong class="text-white">Next.js + n8n + AI Agent</strong></span>
                       <span class="text-success fw-bold d-flex align-items-center gap-1">
                         <span class="spinner-grow spinner-grow-sm text-success" style="width: 8px; height: 8px;" role="status"></span>
@@ -673,17 +762,17 @@
                     </div>
 
                     <!-- Flow Step 1 -->
-                    <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.25);">
+                    <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(99, 102, 241, 0.3);">
                       <div class="d-flex align-items-center gap-2.5">
                         <div class="d-flex align-items-center justify-content-center rounded-2 text-primary" style="width: 30px; height: 30px; background: rgba(99, 102, 241, 0.15);">
                           <i class="fa-solid fa-bolt"></i>
                         </div>
                         <div>
                           <div class="text-white fw-semibold" style="font-size: 0.75rem;">Webhook Event Listener</div>
-                          <div class="text-muted" style="font-size: 0.68rem;">Incoming Lead / Stripe Checkout</div>
+                          <div style="font-size: 0.68rem; color: #cbd5e1;">Incoming Lead / Stripe Checkout</div>
                         </div>
                       </div>
-                      <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; font-size: 0.65rem;">200 OK</span>
+                      <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe; font-size: 0.65rem;">200 OK</span>
                     </div>
 
                     <div class="text-center my-1 text-secondary" style="font-size: 0.7rem;">
@@ -691,17 +780,17 @@
                     </div>
 
                     <!-- Flow Step 2 -->
-                    <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(168, 85, 247, 0.25);">
+                    <div class="p-2.5 rounded-3 mb-2 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(168, 85, 247, 0.3);">
                       <div class="d-flex align-items-center gap-2.5">
                         <div class="d-flex align-items-center justify-content-center rounded-2" style="width: 30px; height: 30px; background: rgba(168, 85, 247, 0.15); color: #c084fc;">
                           <i class="fa-solid fa-brain"></i>
                         </div>
                         <div>
                           <div class="text-white fw-semibold" style="font-size: 0.75rem;">AI Agent (RAG Triage)</div>
-                          <div class="text-muted" style="font-size: 0.68rem;">GPT-4o Vector Lead Scoring</div>
+                          <div style="font-size: 0.68rem; color: #cbd5e1;">GPT-4o Vector Lead Scoring</div>
                         </div>
                       </div>
-                      <span class="badge font-mono text-white" style="background: rgba(168, 85, 247, 0.25); font-size: 0.65rem;">99.4% Match</span>
+                      <span class="badge font-mono text-white" style="background: rgba(168, 85, 247, 0.3); font-size: 0.65rem;">99.4% Match</span>
                     </div>
 
                     <div class="text-center my-1 text-secondary" style="font-size: 0.7rem;">
@@ -709,21 +798,21 @@
                     </div>
 
                     <!-- Flow Step 3 -->
-                    <div class="p-2.5 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(16, 185, 129, 0.25);">
+                    <div class="p-2.5 rounded-3 d-flex align-items-center justify-content-between" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(16, 185, 129, 0.3);">
                       <div class="d-flex align-items-center gap-2.5">
                         <div class="d-flex align-items-center justify-content-center rounded-2 text-success" style="width: 30px; height: 30px; background: rgba(16, 185, 129, 0.15);">
                           <i class="fa-brands fa-whatsapp"></i>
                         </div>
                         <div>
                           <div class="text-white fw-semibold" style="font-size: 0.75rem;">Multi-Channel Dispatch</div>
-                          <div class="text-muted" style="font-size: 0.68rem;">HubSpot CRM + WhatsApp VIP Alert</div>
+                          <div style="font-size: 0.68rem; color: #cbd5e1;">HubSpot CRM + WhatsApp VIP Alert</div>
                         </div>
                       </div>
-                      <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-size: 0.65rem;">0.12s Sync</span>
+                      <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.65rem;">0.12s Sync</span>
                     </div>
 
                     <!-- Video / Terminal Bottom Footer Bar -->
-                    <div class="d-flex justify-content-between align-items-center p-2 mt-3 rounded-2 text-muted" style="background: rgba(3, 7, 18, 0.9); border: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.68rem;">
+                    <div class="d-flex justify-content-between align-items-center p-2 mt-3 rounded-2" style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.68rem; color: #cbd5e1;">
                       <span><i class="fa-solid fa-server text-info me-1"></i> Docker Cluster</span>
                       <span><i class="fa-solid fa-shield-halved text-primary me-1"></i> TLS 1.3</span>
                     </div>
@@ -744,18 +833,20 @@
 
 
     <!-- 3. CASE STUDY / RESEARCH SNAPSHOT SECTION -->
+    <div id="portfolio"></div>
+    <div id="about"></div>
     <section id="case-study" class="py-5 position-relative">
       <div class="container py-lg-4">
         
         <!-- Section Title Header -->
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-          <div class="font-mono text-uppercase fw-bold mb-2" style="font-size: 0.75rem; letter-spacing: 0.1em; color: #a855f7;">
+          <div class="font-mono text-uppercase fw-bold mb-2" style="font-size: 0.75rem; letter-spacing: 0.1em; color: #c084fc;">
             RECAP — ARCHITECTURE
           </div>
           <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
             A Research Snapshot, Put Together
           </h2>
-          <p class="text-secondary" style="font-size: 0.95rem; color: #94a3b8 !important;">
+          <p style="font-size: 0.95rem; color: #e2e8f0 !important;">
             What a finished set of research notes looks like once Company, Audience, and Theme are captured.
           </p>
         </div>
@@ -767,7 +858,7 @@
           <div class="snapshot-header-banner">
             <div class="d-flex align-items-center gap-3">
               <div class="d-flex align-items-center justify-content-center rounded-3" 
-                   style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px);">
+                   style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px);">
                 <i class="fa-regular fa-clipboard fs-5"></i>
               </div>
               <h3 class="font-display fw-bold mb-0 text-white" style="font-size: 1.1rem; letter-spacing: -0.01em;">
@@ -775,14 +866,14 @@
               </h3>
             </div>
             <div class="d-none d-sm-block">
-              <span class="badge rounded-pill px-3 py-1.5 font-mono" style="background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.7rem;">
+              <span class="badge rounded-pill px-3 py-1.5 font-mono" style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.7rem; color: #ffffff;">
                 <i class="fa-solid fa-circle text-success me-1" style="font-size: 0.5rem;"></i> Verified Case Study
               </span>
             </div>
           </div>
 
           <!-- 3 Distinct Sleek Dark Glassmorphic Cards -->
-          <div class="p-4 p-md-5" style="background: #070d19;">
+          <div class="p-4 p-md-5" style="background: rgba(10, 15, 29, 0.9);">
             <div class="row g-4">
               
               <!-- Card 1: COMPANY -->
@@ -804,9 +895,9 @@
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.08) !important;">
-                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #2dd4bf; border: 1px solid rgba(20, 184, 166, 0.25); font-size: 0.7rem;">Scale: 12 Locations</span>
-                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                    <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe; font-size: 0.7rem;">Scale: 12 Locations</span>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; color: #cbd5e1;"></i>
                   </div>
                 </div>
               </div>
@@ -830,9 +921,9 @@
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.08) !important;">
-                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.25); font-size: 0.7rem;">Target: B2B & Retail</span>
-                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                    <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe; font-size: 0.7rem;">Target: B2B & Retail</span>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; color: #cbd5e1;"></i>
                   </div>
                 </div>
               </div>
@@ -856,9 +947,9 @@
                     </p>
                   </div>
 
-                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.08) !important;">
-                    <span class="badge font-mono" style="background: rgba(15, 23, 42, 0.8); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.25); font-size: 0.7rem;">Stack: Next.js + n8n</span>
-                    <i class="fa-solid fa-arrow-right text-muted" style="font-size: 0.75rem;"></i>
+                  <div class="pt-3 mt-4 border-top d-flex justify-content-between align-items-center" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                    <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe; font-size: 0.7rem;">Stack: Next.js + n8n</span>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; color: #cbd5e1;"></i>
                   </div>
                 </div>
               </div>
@@ -867,7 +958,7 @@
           </div>
 
           <!-- Bottom Footer Bar -->
-          <div class="px-4 py-3 d-flex flex-wrap justify-content-between align-items-center font-mono" style="background: #030712; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.75rem; color: #94a3b8;">
+          <div class="px-4 py-3 d-flex flex-wrap justify-content-between align-items-center font-mono" style="background: rgba(15, 23, 42, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.75rem; color: #cbd5e1;">
             <div>Architect: <strong class="text-white">Afsheen Asif</strong></div>
             <div class="d-flex gap-3">
               <span>⏱️ Turnaround: <strong class="text-white">9 Days</strong></span>
@@ -882,7 +973,7 @@
 
 
     <!-- 4. INTERACTIVE ROI & SAVINGS CALCULATOR -->
-    <section id="roi-calculator" class="py-5 position-relative" style="background: rgba(13, 17, 23, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+    <section id="roi-calculator" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
       <div class="container py-lg-4">
         
         <!-- Section Title Header -->
@@ -893,7 +984,7 @@
           <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
             Calculate Your Automation ROI & Annual Savings
           </h2>
-          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+          <p style="font-size: 0.95rem; color: #e2e8f0 !important;">
             Estimate the exact capital and engineering hours your business will recover each year by eliminating repetitive manual operations.
           </p>
         </div>
@@ -913,12 +1004,12 @@
                     <label for="hours-slider" class="form-label fw-semibold text-white mb-0" style="font-size: 0.95rem;">
                       <i class="fa-solid fa-clock text-primary me-2"></i> Manual Hours Spent per Week
                     </label>
-                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(121, 40, 202, 0.2); color: #d8b4fe; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.9rem;">
-                      <span id="hours-val">26</span> <span style="font-size: 0.75rem; font-weight: normal; color: #94a3b8;">hrs/wk</span>
+                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(121, 40, 202, 0.25); color: #e9d5ff; border: 1px solid rgba(139, 92, 246, 0.45); font-size: 0.9rem;">
+                      <span id="hours-val">26</span> <span style="font-size: 0.75rem; font-weight: normal; color: #cbd5e1;">hrs/wk</span>
                     </div>
                   </div>
                   <input type="range" class="form-range" min="5" max="100" value="26" step="1" id="hours-slider" aria-label="Manual Hours Spent per Week" />
-                  <div class="d-flex justify-content-between font-mono text-muted mt-1" style="font-size: 0.7rem;">
+                  <div class="d-flex justify-content-between font-mono mt-1" style="font-size: 0.7rem; color: #cbd5e1;">
                     <span>5 hrs (Light)</span>
                     <span>50 hrs (Team)</span>
                     <span>100 hrs (Enterprise)</span>
@@ -931,12 +1022,12 @@
                     <label for="wage-slider" class="form-label fw-semibold text-white mb-0" style="font-size: 0.95rem;">
                       <i class="fa-solid fa-dollar-sign text-success me-2"></i> Average Hourly Team Wage ($)
                     </label>
-                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.9rem;">
-                      $<span id="wage-val">45</span> <span style="font-size: 0.75rem; font-weight: normal; color: #94a3b8;">/hr</span>
+                    <div class="badge px-3 py-1.5 font-mono fw-bold" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.9rem;">
+                      $<span id="wage-val">45</span> <span style="font-size: 0.75rem; font-weight: normal; color: #cbd5e1;">/hr</span>
                     </div>
                   </div>
                   <input type="range" class="form-range" min="15" max="150" value="45" step="5" id="wage-slider" aria-label="Average Hourly Team Wage in Dollars" />
-                  <div class="d-flex justify-content-between font-mono text-muted mt-1" style="font-size: 0.7rem;">
+                  <div class="d-flex justify-content-between font-mono mt-1" style="font-size: 0.7rem; color: #cbd5e1;">
                     <span>$15/hr (Admin)</span>
                     <span>$75/hr (Engineering)</span>
                     <span>$150/hr (Senior / Executive)</span>
@@ -961,7 +1052,7 @@
               </div>
 
               <!-- Methodology Note -->
-              <div class="pt-3 mt-4 border-top font-mono text-muted d-flex align-items-center gap-2" style="border-color: rgba(255, 255, 255, 0.08) !important; font-size: 0.72rem;">
+              <div class="pt-3 mt-4 border-top font-mono d-flex align-items-center gap-2" style="border-color: rgba(255, 255, 255, 0.1) !important; font-size: 0.72rem; color: #cbd5e1;">
                 <i class="fa-solid fa-info-circle text-primary"></i>
                 <span>Calculated dynamically as: (Hours × 52 × Wage × 75% efficiency factor).</span>
               </div>
@@ -975,20 +1066,20 @@
               
               <!-- Main Annual Savings Card -->
               <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden" 
-                   style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.9) 0%, rgba(13, 17, 23, 0.95) 100%); border: 1px solid rgba(121, 40, 202, 0.35); box-shadow: 0 0 30px -5px rgba(121, 40, 202, 0.25);">
+                   style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%); border: 1px solid rgba(121, 40, 202, 0.4); box-shadow: 0 0 35px -5px rgba(121, 40, 202, 0.3);">
                 
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <span class="font-mono text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.05em; color: #d8b4fe;">
                     <i class="fa-solid fa-vault me-1"></i> Projected Annual Cost Savings
                   </span>
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.68rem;">HIGH ROI</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.68rem;">HIGH ROI</span>
                 </div>
 
                 <div class="font-display fw-bolder text-white mb-2 d-flex align-items-baseline gap-1" style="font-size: calc(2.2rem + 1.2vw); letter-spacing: -0.03em;">
                   <span class="text-success">$</span><span id="savings-display" class="text-gradient-hero">45,630</span>
                 </div>
 
-                <p class="text-muted mb-0" style="font-size: 0.82rem;">
+                <p class="mb-0" style="font-size: 0.82rem; color: #e2e8f0;">
                   Direct reduction in recurring manual overhead, reinvestable into strategic business growth.
                 </p>
               </div>
@@ -997,16 +1088,16 @@
               <div class="row g-3">
                 <div class="col-6">
                   <div class="glass-card p-3 p-md-4 text-center">
-                    <div class="font-mono text-muted text-uppercase mb-1" style="font-size: 0.68rem;">Hours Recovered</div>
+                    <div class="font-mono text-uppercase mb-1" style="font-size: 0.68rem; color: #cbd5e1;">Hours Recovered</div>
                     <div class="font-display fw-bold text-white fs-4">
-                      <span id="hours-recovered-display">1,352</span> <span class="fs-6 fw-normal text-muted">hrs/yr</span>
+                      <span id="hours-recovered-display">1,352</span> <span class="fs-6 fw-normal" style="color: #cbd5e1;">hrs/yr</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-6">
                   <div class="glass-card p-3 p-md-4 text-center">
-                    <div class="font-mono text-muted text-uppercase mb-1" style="font-size: 0.68rem;">Efficiency Gain</div>
+                    <div class="font-mono text-uppercase mb-1" style="font-size: 0.68rem; color: #cbd5e1;">Efficiency Gain</div>
                     <div class="font-display fw-bold text-success fs-4">
                       <span id="efficiency-display">+380%</span>
                     </div>
@@ -1032,13 +1123,14 @@
 
 
     <!-- 5. SERVICES & PRICING GRID -->
+    <div id="pricing"></div>
     <section id="services" class="py-5 position-relative">
       <div class="container py-lg-4">
         
         <!-- Section Header with SV Offer Badge -->
         <div class="text-center mx-auto mb-5" style="max-width: 760px;">
           
-          <!-- Modern Silicon Valley Discount Badge (No Aggressive Red) -->
+          <!-- Modern Silicon Valley Discount Badge -->
           <div class="mb-3">
             <span class="badge-sv-offer">
               <span>🔥 Direct Engagement Offer: 20% Below Market Standard</span>
@@ -1048,7 +1140,7 @@
           <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
             High-Performance Engineering Services & Pricing
           </h2>
-          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+          <p style="font-size: 0.95rem; color: #e2e8f0 !important;">
             Order securely on Fiverr with escrow protection or click <strong class="text-white">Architecture Snapshot</strong> to inspect the technical blueprint.
           </p>
         </div>
@@ -1061,20 +1153,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(99, 102, 241, 0.18); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35);">
                     <i class="fa-solid fa-diagram-project fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$490</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$490</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$390</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   n8n Automation & Workflows
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Multi-step webhook integrations, CRM sync, autonomous lead routing, and self-hosted Docker workflows.
                 </p>
 
@@ -1086,7 +1178,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Zero-loss webhook failover</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> CRM & Database synchronization</li>
                   <li><i class="fa-solid fa-check text-primary me-2"></i> Slack / Telegram alert dispatch</li>
@@ -1113,20 +1205,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(59, 130, 246, 0.18); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.35);">
                     <i class="fa-solid fa-code fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$1,250</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$1,250</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$990</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   React & Next.js Web Platforms
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Lightning-fast server-rendered web apps, custom client portals, headless CMS, and robust API endpoints.
                 </p>
 
@@ -1139,7 +1231,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Sub-second Edge caching & SSR</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Stripe & auth gateway integration</li>
                   <li><i class="fa-solid fa-check text-info me-2"></i> 100% responsive fluid UI systems</li>
@@ -1166,20 +1258,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(168, 85, 247, 0.18); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35);">
                     <i class="fa-solid fa-robot fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$650</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$650</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$520</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   AI Custom Chatbots & Agents
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Vector retrieval on company documentation, appointment booking, and WhatsApp / Web conversational triage.
                 </p>
 
@@ -1191,7 +1283,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> Pinecone / Vector DB knowledge base</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> WhatsApp & Web embed widgets</li>
                   <li><i class="fa-solid fa-check text-purple me-2" style="color: #c084fc;"></i> Google Calendar live auto-booking</li>
@@ -1218,20 +1310,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(16, 185, 129, 0.18); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35);">
                     <i class="fa-solid fa-magnifying-glass-chart fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$350</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$350</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$280</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   Technical SEO & Web Speed
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Lighthouse 99+ audits, JSON-LD Schema markup, asset compression pipelines, and Core Web Vitals optimization.
                 </p>
 
@@ -1243,7 +1335,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Perfect Core Web Vitals (LCP, CLS, INP)</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Structured rich snippet Schema data</li>
                   <li><i class="fa-solid fa-check text-success me-2"></i> Search Console indexation fixes</li>
@@ -1270,20 +1362,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(6, 182, 212, 0.15); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(6, 182, 212, 0.18); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.35);">
                     <i class="fa-brands fa-docker fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$400</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$400</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$320</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   Docker & Cloud Deployment
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Self-hosted VPS orchestrations, Docker Compose clusters, SSL reverse proxy setup, and automated backup routines.
                 </p>
 
@@ -1295,7 +1387,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Complete Docker compose containerization</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Let's Encrypt SSL & reverse proxy</li>
                   <li><i class="fa-solid fa-check text-cyan me-2" style="color: #22d3ee;"></i> Automated volume backups & cron maintenance</li>
@@ -1322,20 +1414,20 @@
             <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 46px; height: 46px; background: rgba(245, 158, 11, 0.18); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.35);">
                     <i class="fa-solid fa-share-nodes fs-5"></i>
                   </div>
                   <div class="text-end">
-                    <span class="font-mono text-muted text-uppercase d-block" style="font-size: 0.68rem;">Market Rate: <del class="text-secondary opacity-75">$300</del></span>
+                    <span class="font-mono text-uppercase d-block" style="font-size: 0.68rem; color: #cbd5e1;">Market Rate: <del class="opacity-75" style="color: #94a3b8;">$300</del></span>
                     <span class="font-display fw-bolder text-white fs-3 text-gradient-hero">$240</span>
-                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.2); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.35); font-size: 0.65rem;">-20%</span>
+                    <span class="badge font-mono ms-1" style="background: rgba(121, 40, 202, 0.25); color: #c084fc; border: 1px solid rgba(121, 40, 202, 0.4); font-size: 0.65rem;">-20%</span>
                   </div>
                 </div>
 
                 <h3 class="font-display fw-bold text-white mb-2" style="font-size: 1.15rem;">
                   Social & Pipeline Automation
                 </h3>
-                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #94a3b8 !important;">
+                <p class="mb-3" style="font-size: 0.85rem; line-height: 1.5; color: #e2e8f0 !important;">
                   Autonomous social publishing engines, newsletter RSS pipelines, lead scraping, and unified notification feeds.
                 </p>
 
@@ -1347,7 +1439,7 @@
                 </div>
 
                 <!-- Features -->
-                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.08) !important; color: #cbd5e1;">
+                <ul class="list-unstyled font-mono mb-4 pt-3 border-top" style="font-size: 0.75rem; border-color: rgba(255, 255, 255, 0.1) !important; color: #e2e8f0;">
                   <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Automated multi-channel content scheduler</li>
                   <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Airtable / Notion centralized content hub</li>
                   <li><i class="fa-solid fa-check text-warning me-2"></i> Zero-maintenance webhook dispatch</li>
@@ -1376,7 +1468,7 @@
 
 
     <!-- 6. CLIENT REVIEWS & ENGINEERING TRUST SECTION -->
-    <section id="reviews" class="py-5 position-relative" style="background: rgba(13, 17, 23, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+    <section id="reviews" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
       <div class="container py-lg-4">
         
         <!-- Section Header -->
@@ -1387,7 +1479,7 @@
           <h2 class="font-display fw-bolder text-white mb-2" style="font-size: calc(1.5rem + 1.2vw); letter-spacing: -0.02em;">
             Verified Enterprise & Agency Feedback
           </h2>
-          <p class="text-secondary" style="font-size: 0.95rem; color: #cbd5e1 !important;">
+          <p style="font-size: 0.95rem; color: #e2e8f0 !important;">
             Real-world engineering impact delivered for agencies, scaling e-commerce brands, and global founders.
           </p>
         </div>
@@ -1407,7 +1499,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                   </div>
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.65rem;">
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.15); color: #c7d2fe; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.65rem;">
                     n8n Enterprise Flow
                   </span>
                 </div>
@@ -1417,18 +1509,18 @@
                 </p>
               </div>
 
-              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.08) !important;">
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.1) !important;">
                 <div class="d-flex align-items-center gap-2.5">
-                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white shadow-sm" 
                        style="width: 40px; height: 40px; background: linear-gradient(135deg, #7928CA, #4F46E5);">
                     MV
                   </div>
                   <div>
                     <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">Marcus Vance</div>
-                    <div class="text-muted font-mono" style="font-size: 0.7rem;">Founder, Apex Scale Media</div>
+                    <div class="font-mono" style="font-size: 0.7rem; color: #cbd5e1;">Founder, Apex Scale Media</div>
                   </div>
                 </div>
-                <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; font-size: 0.68rem;">
+                <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7; font-size: 0.68rem;">
                   -25h / wk
                 </span>
               </div>
@@ -1447,7 +1539,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                   </div>
-                  <span class="badge font-mono" style="background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); font-size: 0.65rem;">
+                  <span class="badge font-mono" style="background: rgba(59, 130, 246, 0.18); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); font-size: 0.65rem;">
                     Next.js Web App
                   </span>
                 </div>
@@ -1457,18 +1549,18 @@
                 </p>
               </div>
 
-              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.08) !important;">
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.1) !important;">
                 <div class="d-flex align-items-center gap-2.5">
-                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white shadow-sm" 
                        style="width: 40px; height: 40px; background: linear-gradient(135deg, #2563eb, #38bdf8);">
                     ER
                   </div>
                   <div>
                     <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">Elena Rostova</div>
-                    <div class="text-muted font-mono" style="font-size: 0.7rem;">VP Growth, Horizon Goods</div>
+                    <div class="font-mono" style="font-size: 0.7rem; color: #cbd5e1;">VP Growth, Horizon Goods</div>
                   </div>
                 </div>
-                <span class="badge font-mono" style="background: rgba(56, 189, 248, 0.15); color: #7dd3fc; font-size: 0.68rem;">
+                <span class="badge font-mono" style="background: rgba(56, 189, 248, 0.18); color: #7dd3fc; font-size: 0.68rem;">
                   Lighthouse 99
                 </span>
               </div>
@@ -1487,7 +1579,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                   </div>
-                  <span class="badge font-mono" style="background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.3); font-size: 0.65rem;">
+                  <span class="badge font-mono" style="background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); font-size: 0.65rem;">
                     RAG AI Chatbot
                   </span>
                 </div>
@@ -1497,18 +1589,18 @@
                 </p>
               </div>
 
-              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.08) !important;">
+              <div class="pt-3 border-top d-flex align-items-center justify-content-between" style="border-color: rgba(255, 255, 255, 0.1) !important;">
                 <div class="d-flex align-items-center gap-2.5">
-                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white" 
+                  <div class="d-flex align-items-center justify-content-center rounded-circle font-display fw-bold text-white shadow-sm" 
                        style="width: 40px; height: 40px; background: linear-gradient(135deg, #7928CA, #c084fc);">
                     DC
                   </div>
                   <div>
                     <div class="text-white fw-bold font-display" style="font-size: 0.9rem;">David Chen</div>
-                    <div class="text-muted font-mono" style="font-size: 0.7rem;">CTO, SynthAI Labs</div>
+                    <div class="font-mono" style="font-size: 0.7rem; color: #cbd5e1;">CTO, SynthAI Labs</div>
                   </div>
                 </div>
-                <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.2); font-size: 0.68rem;">
+                <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.25); font-size: 0.68rem;">
                   99.4% Triage
                 </span>
               </div>
@@ -1539,7 +1631,7 @@
                 Let's Build Your Autonomous Stack
               </h2>
               
-              <p class="text-secondary mb-4" style="font-size: 0.92rem; line-height: 1.6; color: #94a3b8 !important;">
+              <p class="mb-4" style="font-size: 0.92rem; line-height: 1.6; color: #e2e8f0 !important;">
                 Have a project or recurring automation bottlenecks? Submit your requirements or connect directly through official channels.
               </p>
 
@@ -1547,11 +1639,11 @@
                 
                 <!-- Email -->
                 <div class="d-flex align-items-center gap-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 42px; height: 42px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #818cf8;">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 42px; height: 42px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); color: #818cf8;">
                     <i class="fa-solid fa-envelope"></i>
                   </div>
                   <div>
-                    <span class="text-muted d-block" style="font-size: 0.7rem;">DIRECT EMAIL</span>
+                    <span class="d-block" style="font-size: 0.7rem; color: #cbd5e1;">DIRECT EMAIL</span>
                     <a href="mailto:affsheenasif@gmail.com" class="text-white text-decoration-none fw-semibold">
                       affsheenasif@gmail.com
                     </a>
@@ -1560,11 +1652,11 @@
 
                 <!-- Global Remote Location -->
                 <div class="d-flex align-items-center gap-3">
-                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 42px; height: 42px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); color: #10b981;">
+                  <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 42px; height: 42px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); color: #10b981;">
                     <i class="fa-solid fa-globe"></i>
                   </div>
                   <div>
-                    <span class="text-muted d-block" style="font-size: 0.7rem;">LOCATION & AVAILABILITY</span>
+                    <span class="d-block" style="font-size: 0.7rem; color: #cbd5e1;">LOCATION & AVAILABILITY</span>
                     <span class="text-white fw-semibold" style="font-size: 0.82rem;">Global Remote • UTC+5 (Full US & EU Business Hours Overlap)</span>
                   </div>
                 </div>
@@ -1596,7 +1688,7 @@
 
             <!-- Right Contact Form (Stripe / Linear Style Panel) -->
             <div class="col-lg-7">
-              <div class="p-4 rounded-4" style="background: rgba(13, 17, 23, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 20px 50px rgba(0, 0, 0, 0.5);">
+              <div class="p-4 rounded-4" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(0, 0, 0, 0.5);">
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                   
                   <!-- Web3Forms Configuration Hidden Fields -->
@@ -1606,18 +1698,18 @@
                   <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                   <div class="mb-3">
-                    <label for="form-name" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em;">Your Name / Organization</label>
+                    <label for="form-name" class="form-label font-mono text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em; color: #e2e8f0;">Your Name / Organization</label>
                     <input type="text" name="name" class="form-control form-control-sv" id="form-name" required placeholder="Alex Turner / Acme Labs" />
                   </div>
 
                   <div class="mb-3">
-                    <label for="form-email" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em;">Your Email Address</label>
+                    <label for="form-email" class="form-label font-mono text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em; color: #e2e8f0;">Your Email Address</label>
                     <input type="email" name="email" class="form-control form-control-sv" id="form-email" required placeholder="alex@acmelabs.com" />
                   </div>
 
                   <!-- Service Needed Dropdown -->
                   <div class="mb-3">
-                    <label for="form-service" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em;">Service Needed (20% Off Offer Active)</label>
+                    <label for="form-service" class="form-label font-mono text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em; color: #e2e8f0;">Service Needed (20% Off Offer Active)</label>
                     <select name="service" class="form-select form-select-sv" id="form-service">
                       <option value="n8n Automation & Workflows">n8n Automation & Workflows — $390 (was $490)</option>
                       <option value="React & Next.js Web Platforms">React & Next.js Web Platforms — $990 (was $1,250)</option>
@@ -1630,7 +1722,7 @@
                   </div>
 
                   <div class="mb-4">
-                    <label for="form-message" class="form-label font-mono text-muted text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em;">Project Details / Bottlenecks</label>
+                    <label for="form-message" class="form-label font-mono text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.05em; color: #e2e8f0;">Project Details / Bottlenecks</label>
                     <textarea name="message" class="form-control form-control-sv" id="form-message" rows="3" required placeholder="Describe your workflow requirements, APIs to connect, or timelines..." style="resize: none;"></textarea>
                   </div>
 
@@ -1658,65 +1750,108 @@
   </main>
 
 
-  <!-- 8. FOOTER -->
-  <footer class="py-5" style="background: #020617; border-top: 1px solid rgba(255, 255, 255, 0.06); z-index: 10; position: relative;">
-    <div class="container">
+  <!-- 8. FOOTER (MULTI-COLUMN MINIMALIST SILICON VALLEY ARCHITECTURE) -->
+  <footer class="py-5" style="background: #020617; border-top: 1px solid rgba(255, 255, 255, 0.08); z-index: 10; position: relative;">
+    <div class="container py-lg-3">
       
-      <div class="row align-items-center gy-4 pb-4 border-bottom" style="border-color: rgba(255, 255, 255, 0.06) !important;">
+      <!-- Brand & Global Presence Header Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center pb-4 mb-4 border-bottom" style="border-color: rgba(255, 255, 255, 0.08) !important;">
+        <div class="d-flex align-items-center gap-2.5 mb-3 mb-md-0">
+          <div class="d-flex align-items-center justify-content-center rounded-3 flex-shrink-0" 
+               style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(59, 130, 246, 0.3) 100%); border: 1px solid rgba(139, 92, 246, 0.45); box-shadow: 0 0 14px rgba(99, 102, 241, 0.35);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="font-display fw-bolder text-white tracking-wider" style="font-size: 1.15rem; letter-spacing: 0.04em;">AFSHEEN ASIF</span>
+        </div>
+        <div class="font-mono text-uppercase" style="font-size: 0.72rem; color: #cbd5e1; letter-spacing: 0.06em;">
+          Full-Stack Engineering & Autonomous Systems Architecture
+        </div>
+      </div>
+
+      <!-- 3-Column Minimalist Grid -->
+      <div class="row g-4 pb-4">
         
-        <!-- Brand Signature with Logo -->
-        <div class="col-md-6 text-center text-md-start">
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3 mb-2">
-            <img src="logo.png" alt="Afsheen Asif Logo" class="rounded-3" 
-                 style="width: 36px; height: 36px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(121, 40, 202, 0.5));" />
-            <div class="d-flex align-items-center gap-1.5">
-              <span class="font-display fw-bolder text-white fs-5">AFSHEEN ASIF</span>
-              <span class="d-inline-block rounded-circle" style="width: 5px; height: 5px; background-color: #6366f1; box-shadow: 0 0 8px #6366f1;"></span>
-            </div>
-          </div>
-          <div class="font-mono text-muted" style="font-size: 0.8rem;">
-            Afsheen Asif — Autonomous Systems & Engineering
-          </div>
-          <div class="font-mono text-muted" style="font-size: 0.75rem;">
-            Global Remote • UTC+5 (Full US & EU Business Hours Overlap)
-          </div>
+        <!-- Column 1: SERVICES -->
+        <div class="col-md-4">
+          <h4 class="footer-col-title">SERVICES</h4>
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              <a href="#services" class="footer-link">n8n Automation & AI</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#services" class="footer-link">Next.js Web Development</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#services" class="footer-link">Custom AI Chatbots</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#services" class="footer-link">Technical SEO Systems</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#services" class="footer-link">Flutter Mobile Apps</a>
+            </li>
+          </ul>
         </div>
 
-        <!-- Social Channels -->
-        <div class="col-md-6">
-          <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-2.5">
-            
-            <!-- Fiverr -->
-            <a href="https://www.fiverr.com/users/afsheenasiff/" target="_blank" rel="noopener noreferrer" 
-               class="btn-sv-icon fiverr" title="Fiverr Profile" aria-label="Fiverr Profile">
-              <i class="fa-solid fa-bolt"></i>
-            </a>
+        <!-- Column 2: COMPANY -->
+        <div class="col-md-4">
+          <h4 class="footer-col-title">COMPANY</h4>
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              <a href="#portfolio" class="footer-link">Case Studies</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#about" class="footer-link">About Us & Guarantees</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#pricing" class="footer-link">Pricing & Sprints</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#modal-client-login" data-bs-toggle="modal" class="footer-link">Client Portal</a>
+            </li>
+          </ul>
+        </div>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/afsheen-asif-6a476a308" target="_blank" rel="noopener noreferrer" 
-               class="btn-sv-icon linkedin" title="LinkedIn Profile" aria-label="LinkedIn Profile">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               class="btn-sv-icon" title="GitHub Profile" aria-label="GitHub Profile">
-              <i class="fa-brands fa-github text-white"></i>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:affsheenasif@gmail.com" 
-               class="btn-sv-icon" title="Email Afsheen Asif" aria-label="Email Afsheen Asif">
-              <i class="fa-solid fa-envelope text-primary"></i>
-            </a>
-
-          </div>
+        <!-- Column 3: DIRECT CONTACT -->
+        <div class="col-md-4">
+          <h4 class="footer-col-title">DIRECT CONTACT</h4>
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              <a href="mailto:affsheenasif@gmail.com" class="footer-link text-white fw-semibold">
+                <i class="fa-solid fa-envelope me-1 text-primary" style="font-size: 0.8rem;"></i>
+                affsheenasif@gmail.com
+              </a>
+            </li>
+            <li class="footer-link-item">
+              <a href="https://www.fiverr.com/users/afsheenasiff/" target="_blank" rel="noopener noreferrer" class="footer-link">
+                <span>Fiverr Profile</span>
+                <span style="font-size: 0.85rem;">↗</span>
+              </a>
+            </li>
+            <li class="footer-link-item">
+              <a href="https://www.linkedin.com/in/afsheen-asif-6a476a308" target="_blank" rel="noopener noreferrer" class="footer-link">
+                <span>LinkedIn Profile</span>
+                <span style="font-size: 0.85rem;">↗</span>
+              </a>
+            </li>
+            <li class="footer-link-item">
+              <span class="footer-link" style="color: #cbd5e1; cursor: default;">
+                <i class="fa-solid fa-location-dot me-1 text-success" style="font-size: 0.8rem;"></i>
+                Faisalabad, Pakistan
+              </span>
+            </li>
+          </ul>
         </div>
 
       </div>
 
       <!-- Copyright Sub-Footer -->
-      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 font-mono text-muted" style="font-size: 0.75rem;">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 border-top font-mono" 
+           style="border-color: rgba(255, 255, 255, 0.08) !important; font-size: 0.75rem; color: #cbd5e1;">
         <div>© 2026 Afsheen Asif. All rights reserved.</div>
         <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
           <span>Engineered for 60fps & 99.9% Uptime</span>
@@ -1727,6 +1862,45 @@
 
     </div>
   </footer>
+
+  <!-- CLIENT LOGIN / SECURE PORTAL MODAL -->
+  <div class="modal fade modal-cyber" id="modal-client-login" tabindex="-1" aria-labelledby="clientLoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-primary" style="width: 32px; height: 32px; background: rgba(99, 102, 241, 0.15);">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <h5 class="modal-title font-display fw-bold text-white mb-0" id="clientLoginModalLabel">
+              Client Portal Authentication
+            </h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p style="font-size: 0.88rem; color: #e2e8f0;" class="mb-3">
+            Secure client workspace for real-time workflow telemetry, Docker container health, and production project deliverables.
+          </p>
+          <div class="mb-3">
+            <label class="form-label text-white font-mono" style="font-size: 0.78rem;">CLIENT WORKSPACE ID / EMAIL</label>
+            <input type="email" class="form-control form-control-sv" placeholder="e.g. client@company.com" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-white font-mono" style="font-size: 0.78rem;">ACCESS KEY / PIN</label>
+            <input type="password" class="form-control form-control-sv" placeholder="••••••••••••" />
+          </div>
+          <div class="p-3 rounded-3 font-mono mb-3" style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe; font-size: 0.75rem;">
+            <i class="fa-solid fa-circle-info me-1"></i> Demo client data is showcased below in the <a href="#case-study" data-bs-dismiss="modal" class="text-white text-decoration-underline fw-bold">Corner Bakery Co. Verified Case Study</a>.
+          </div>
+          <button type="button" class="btn-sv-primary w-100 py-2.5" onclick="alert('Demo Client Workspace: Live architecture snapshot is featured in the Corner Bakery Co. case study.')" data-bs-dismiss="modal">
+            <span>Enter Client Workspace</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- 9. ARCHITECTURE SNAPSHOT MODALS -->
@@ -1749,15 +1923,15 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Step-by-Step Data Pipeline</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Step-by-Step Data Pipeline</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">01 Trigger</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">01 Trigger</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Webhook & Event Ingestion</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">HTTP POST from Stripe, Calendly, or Typeform</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">HTTP POST from Stripe, Calendly, or Typeform</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">TLS 1.3</span>
@@ -1767,10 +1941,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.2);">02 Process</span>
+                  <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.25);">02 Process</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">n8n Docker Engine & GPT-4o Qualification</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">JSON schema normalization, deduplication & AI lead scoring</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">JSON schema normalization, deduplication & AI lead scoring</span>
                   </div>
                 </div>
                 <span class="text-info font-mono" style="font-size: 0.75rem;">Sub-50ms</span>
@@ -1780,10 +1954,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">03 Dispatch</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">03 Dispatch</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Multi-Target CRM & WhatsApp Sync</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">HubSpot record update, PostgreSQL persistence & Slack emergency alert</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">HubSpot record update, PostgreSQL persistence & Slack emergency alert</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">200 OK</span>
@@ -1794,7 +1968,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">n8n Self-Hosted</span>
                 <span class="badge badge-cyber-dark">Docker</span>
@@ -1804,8 +1978,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); color: #6ee7b7; font-size: 0.8rem;">
                 <i class="fa-solid fa-bolt me-1"></i> 78% Manual Overhead Cut<br />
                 <i class="fa-solid fa-shield me-1"></i> Zero Data Drop SLA
               </div>
@@ -1830,7 +2004,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-2 text-info" style="width: 32px; height: 32px; background: rgba(59, 130, 246, 0.15);">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-info" style="width: 32px; height: 32px; background: rgba(59, 130, 246, 0.18);">
               <i class="fa-solid fa-code"></i>
             </span>
             <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel2">
@@ -1842,7 +2016,7 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Architecture Flow</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Architecture Flow</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
@@ -1850,7 +2024,7 @@
                   <span class="badge font-mono" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd;">01 Edge</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Cloudflare / Vercel Edge Cache</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Global CDN routing with sub-50ms TTFB</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Global CDN routing with sub-50ms TTFB</span>
                   </div>
                 </div>
                 <span class="text-info font-mono" style="font-size: 0.75rem;">Edge SSR</span>
@@ -1860,10 +2034,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">02 Core</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">02 Core</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Next.js App Router & Server Actions</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Type-safe API routes, React server components, Tailwind & Bootstrap UI</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Type-safe API routes, React server components, Tailwind & Bootstrap UI</span>
                   </div>
                 </div>
                 <span class="text-primary font-mono" style="font-size: 0.75rem;">React 18</span>
@@ -1873,10 +2047,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">03 Data</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">03 Data</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Supabase / PostgreSQL & Stripe Gateways</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Row-level security auth, webhook listeners & transaction logging</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Row-level security auth, webhook listeners & transaction logging</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">Encrypted</span>
@@ -1887,7 +2061,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">Next.js 14</span>
                 <span class="badge badge-cyber-dark">React</span>
@@ -1897,8 +2071,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #93c5fd; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.35); color: #93c5fd; font-size: 0.8rem;">
                 <i class="fa-solid fa-gauge-high me-1"></i> Lighthouse 99 Performance<br />
                 <i class="fa-solid fa-chart-line me-1"></i> +45% Inbound Conversion
               </div>
@@ -1923,7 +2097,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-2" style="width: 32px; height: 32px; background: rgba(168, 85, 247, 0.15); color: #c084fc;">
+            <span class="d-flex align-items-center justify-content-center rounded-2" style="width: 32px; height: 32px; background: rgba(168, 85, 247, 0.18); color: #c084fc;">
               <i class="fa-solid fa-robot"></i>
             </span>
             <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel3">
@@ -1935,15 +2109,15 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Vector RAG Pipeline</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Vector RAG Pipeline</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.2);">01 Inbound</span>
+                  <span class="badge font-mono" style="color: #c084fc; background: rgba(121, 40, 202, 0.25);">01 Inbound</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Multi-Channel Customer Input</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">WhatsApp Cloud API, Discord, or Web Embedded Widget</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">WhatsApp Cloud API, Discord, or Web Embedded Widget</span>
                   </div>
                 </div>
                 <span class="text-purple font-mono" style="color: #c084fc; font-size: 0.75rem;">FastAPI</span>
@@ -1953,10 +2127,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">02 Retrieve</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">02 Retrieve</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Pinecone / Chroma Vector Retrieval + LangChain</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Cosine semantic match on company PDFs, FAQs & internal documentation</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Cosine semantic match on company PDFs, FAQs & internal documentation</span>
                   </div>
                 </div>
                 <span class="text-info font-mono" style="font-size: 0.75rem;">99.4% Match</span>
@@ -1966,10 +2140,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">03 Action</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">03 Action</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Automated Calendar Booking & Ticket Triage</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Cal.com / Google Calendar API invocation with live conversational context</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Cal.com / Google Calendar API invocation with live conversational context</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">Instant Sync</span>
@@ -1980,7 +2154,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">OpenAI GPT-4o</span>
                 <span class="badge badge-cyber-dark">LangChain</span>
@@ -1990,8 +2164,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(121, 40, 202, 0.1); border: 1px solid rgba(121, 40, 202, 0.3); color: #d8b4fe; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(121, 40, 202, 0.12); border: 1px solid rgba(121, 40, 202, 0.35); color: #d8b4fe; font-size: 0.8rem;">
                 <i class="fa-solid fa-clock me-1"></i> 24/7 Autonomous Triage<br />
                 <i class="fa-solid fa-check-double me-1"></i> Zero Hallucination Guardrails
               </div>
@@ -2016,7 +2190,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-2 text-cyan" style="width: 32px; height: 32px; background: rgba(6, 182, 212, 0.15); color: #22d3ee;">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-cyan" style="width: 32px; height: 32px; background: rgba(6, 182, 212, 0.18); color: #22d3ee;">
               <i class="fa-brands fa-docker"></i>
             </span>
             <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel4">
@@ -2028,15 +2202,15 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Cloud Orchestration Pipeline</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Cloud Orchestration Pipeline</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="color: #22d3ee; background: rgba(6, 182, 212, 0.2);">01 VPS Host</span>
+                  <span class="badge font-mono" style="color: #22d3ee; background: rgba(6, 182, 212, 0.25);">01 VPS Host</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Dedicated Cloud Server Hardening</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">SSH key auth, UFW firewall, fail2ban & non-root user isolation</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">SSH key auth, UFW firewall, fail2ban & non-root user isolation</span>
                   </div>
                 </div>
                 <span class="font-mono" style="color: #22d3ee; font-size: 0.75rem;">Ubuntu 22.04</span>
@@ -2046,10 +2220,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">02 Compose</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">02 Compose</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Docker Compose Cluster (n8n, Postgres, Redis)</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Isolated container networks with persistent volume mappings</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Isolated container networks with persistent volume mappings</span>
                   </div>
                 </div>
                 <span class="text-info font-mono" style="font-size: 0.75rem;">Docker 24</span>
@@ -2059,10 +2233,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">03 Reverse Proxy</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">03 Reverse Proxy</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Nginx Proxy Manager + Let's Encrypt SSL</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Automatic TLS renewal, WebSocket headers & DDoS rate limiting</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Automatic TLS renewal, WebSocket headers & DDoS rate limiting</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">A+ Security</span>
@@ -2073,7 +2247,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">Docker Compose</span>
                 <span class="badge badge-cyber-dark">Nginx Proxy</span>
@@ -2082,8 +2256,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.35); color: #67e8f9; font-size: 0.8rem;">
                 <i class="fa-solid fa-server me-1"></i> 99.9% Self-Hosted Uptime<br />
                 <i class="fa-solid fa-shield-halved me-1"></i> Zero Cloud Subscription Lock-in
               </div>
@@ -2108,7 +2282,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-2 text-success" style="width: 32px; height: 32px; background: rgba(16, 185, 129, 0.15);">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-success" style="width: 32px; height: 32px; background: rgba(16, 185, 129, 0.18);">
               <i class="fa-solid fa-magnifying-glass-chart"></i>
             </span>
             <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel5">
@@ -2120,15 +2294,15 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">SEO Engine Architecture</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">SEO Engine Architecture</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">01 Audit</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">01 Audit</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Core Web Vitals & Crawl Diagnostics</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Elimination of render-blocking JS, layout shifts (CLS), and long tasks (INP)</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Elimination of render-blocking JS, layout shifts (CLS), and long tasks (INP)</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">LCP &lt; 0.8s</span>
@@ -2138,10 +2312,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">02 Schema</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">02 Schema</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">JSON-LD Rich Snippet Generation</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Automated Schema markup for Organizations, Products, FAQs, and Breadcrumbs</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Automated Schema markup for Organizations, Products, FAQs, and Breadcrumbs</span>
                   </div>
                 </div>
                 <span class="text-primary font-mono" style="font-size: 0.75rem;">JSON-LD Valid</span>
@@ -2154,7 +2328,7 @@
                   <span class="badge font-mono" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd;">03 Index</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Automated Sitemap & Indexing Webhooks</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Google Search Console API & Bing IndexNow instant notification pipeline</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Google Search Console API & Bing IndexNow instant notification pipeline</span>
                   </div>
                 </div>
                 <span class="text-info font-mono" style="font-size: 0.75rem;">Fast Index</span>
@@ -2165,7 +2339,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">JSON-LD Schema</span>
                 <span class="badge badge-cyber-dark">Lighthouse CLI</span>
@@ -2174,8 +2348,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); color: #6ee7b7; font-size: 0.8rem;">
                 <i class="fa-solid fa-chart-line me-1"></i> +140% Indexation Velocity<br />
                 <i class="fa-solid fa-circle-check me-1"></i> Zero Vitals Penalties
               </div>
@@ -2200,7 +2374,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-2 text-warning" style="width: 32px; height: 32px; background: rgba(245, 158, 11, 0.15);">
+            <span class="d-flex align-items-center justify-content-center rounded-2 text-warning" style="width: 32px; height: 32px; background: rgba(245, 158, 11, 0.18);">
               <i class="fa-solid fa-share-nodes"></i>
             </span>
             <h5 class="modal-title font-display fw-bold text-white mb-0" id="modalLabel6">
@@ -2212,7 +2386,7 @@
         <div class="modal-body p-4">
           
           <div class="mb-4">
-            <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Automated Multi-Channel Pipeline</div>
+            <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Automated Multi-Channel Pipeline</div>
             <div class="d-flex flex-column gap-2.5">
               
               <div class="node-pill d-flex align-items-center justify-content-between">
@@ -2220,7 +2394,7 @@
                   <span class="badge font-mono" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24;">01 Capture</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Content Hub & RSS Webhook Listeners</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Airtable / Notion status updates or blog publishing webhooks</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Airtable / Notion status updates or blog publishing webhooks</span>
                   </div>
                 </div>
                 <span class="text-warning font-mono" style="font-size: 0.75rem;">Airtable API</span>
@@ -2230,10 +2404,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">02 Format</span>
+                  <span class="badge font-mono" style="background: rgba(99, 102, 241, 0.2); color: #c7d2fe;">02 Format</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">AI Text Structuring & Media Processing</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">GPT-4o adaptation for LinkedIn, X (Twitter), Discord & Newsletter formats</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">GPT-4o adaptation for LinkedIn, X (Twitter), Discord & Newsletter formats</span>
                   </div>
                 </div>
                 <span class="text-primary font-mono" style="font-size: 0.75rem;">GPT-4o Polish</span>
@@ -2243,10 +2417,10 @@
 
               <div class="node-pill d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">03 Broadcast</span>
+                  <span class="badge font-mono" style="background: rgba(16, 185, 129, 0.18); color: #6ee7b7;">03 Broadcast</span>
                   <div>
                     <strong class="text-white d-block" style="font-size: 0.85rem;">Concurrent Scheduled API Broadcast</strong>
-                    <span class="text-muted" style="font-size: 0.72rem;">Direct publishing with UTM tracking parameters and engagement webhook triage</span>
+                    <span style="font-size: 0.72rem; color: #cbd5e1;">Direct publishing with UTM tracking parameters and engagement webhook triage</span>
                   </div>
                 </div>
                 <span class="text-success font-mono" style="font-size: 0.75rem;">Multi-Cast</span>
@@ -2257,7 +2431,7 @@
 
           <div class="row g-3">
             <div class="col-md-7">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Integrated Frameworks</div>
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Integrated Frameworks</div>
               <div class="d-flex flex-wrap gap-1.5">
                 <span class="badge badge-cyber-indigo">n8n / Make</span>
                 <span class="badge badge-cyber-dark">Airtable API</span>
@@ -2266,8 +2440,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="font-mono text-uppercase text-muted mb-2" style="font-size: 0.7rem;">Measurable Impact</div>
-              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: #fde68a; font-size: 0.8rem;">
+              <div class="font-mono text-uppercase mb-2" style="font-size: 0.7rem; color: #cbd5e1;">Measurable Impact</div>
+              <div class="p-2.5 rounded-3 font-mono" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); color: #fde68a; font-size: 0.8rem;">
                 <i class="fa-solid fa-check me-1"></i> 100% Autonomous Distribution<br />
                 <i class="fa-solid fa-clock me-1"></i> Saves 15+ hrs/mo Marketing Drag
               </div>
@@ -2448,12 +2622,16 @@
         });
       }
 
-      // 3. Auto-collapse mobile navbar when clicking navigation links
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-collapse .btn-sv-primary, .navbar-collapse .btn-sv-secondary, .navbar-collapse .btn-sv-icon');
+      // 3. Auto-collapse mobile navbar and handle active nav glow
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .nav-link-modern, .navbar-collapse .btn-nav-ghost, .navbar-collapse .btn-nav-fiverr');
       const navbarCollapse = document.getElementById('navbarMain');
       if (navbarCollapse) {
         navLinks.forEach(link => {
           link.addEventListener('click', () => {
+            if (link.classList.contains('nav-link-modern')) {
+              document.querySelectorAll('.nav-link-modern').forEach(l => l.classList.remove('active'));
+              link.classList.add('active');
+            }
             if (navbarCollapse.classList.contains('show')) {
               const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
               if (bsCollapse) bsCollapse.hide();
