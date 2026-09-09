@@ -25,17 +25,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    /* Ultra-Minimal Obsidian Design Tokens (Linear.app Palette) */
+    /* Ultra-Minimal Obsidian Design Tokens */
     :root {
-      --bg-dark: #080b11;
-      --card-bg: rgba(15, 23, 42, 0.65);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --card-border-hover: rgba(99, 102, 241, 0.35);
-      --input-bg: rgba(15, 23, 42, 0.75);
-      --input-border: rgba(255, 255, 255, 0.1);
+      --bg-dark: #07090e;
+      --card-bg: rgba(15, 23, 42, 0.5);
+      --card-border: rgba(255, 255, 255, 0.07);
+      --card-border-hover: rgba(139, 92, 246, 0.28);
+      --input-bg: rgba(15, 23, 42, 0.7);
+      --input-border: rgba(255, 255, 255, 0.08);
       --brand-purple: #7928ca;
       --brand-indigo: #4f46e5;
       --brand-violet: #8b5cf6;
+      --brand-slate: #64748b;
+      --accent-violet: #8b5cf6;
+      --accent-slate: #94a3b8;
       --brand-cyan: #06b6d4;
       --brand-emerald: #10b981;
       --text-main: #ffffff;
@@ -53,8 +56,8 @@
     }
 
     body {
-      background-color: #080b11;
-      background: radial-gradient(circle at 50% 0%, #151c2e 0%, #0c111c 45%, #080b11 85%) fixed;
+      background-color: #07090e;
+      background: radial-gradient(circle at 50% 0%, #111726 0%, #090d15 45%, #07090e 85%) fixed;
       color: #f8fafc;
       font-family: var(--font-main);
       overflow-x: hidden;
@@ -65,7 +68,7 @@
 
     /* Selection Highlighting */
     ::selection {
-      background: var(--brand-purple);
+      background: rgba(139, 92, 246, 0.35);
       color: #ffffff;
     }
 
@@ -74,15 +77,15 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #080b11;
+      background: #07090e;
     }
     ::-webkit-scrollbar-thumb {
       background: #1e293b;
       border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--brand-purple);
+      background: #334155;
     }
 
     /* Typography Utilities */
@@ -104,19 +107,19 @@
 
     /* Ultra-Minimal Sleek Glass Cards (Linear.app Obsidian Glass) */
     .glass-card {
-      background: rgba(15, 23, 42, 0.65);
+      background: rgba(15, 23, 42, 0.5);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 1rem;
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.03);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.02);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .glass-card:hover {
       transform: translateY(-3px);
-      border-color: rgba(99, 102, 241, 0.35);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 15px -3px rgba(99, 102, 241, 0.15);
+      border-color: rgba(139, 92, 246, 0.28);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 16px -2px rgba(139, 92, 246, 0.12);
     }
 
     /* Silicon Valley Modern CTA Button (Primary) */
@@ -282,10 +285,10 @@
 
     /* Modern Navbar Overrides */
     .navbar-dark-cyber {
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(7, 9, 14, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .nav-link-modern {
@@ -314,15 +317,15 @@
       left: 0.85rem;
       right: 0.85rem;
       height: 2px;
-      background: #3b82f6;
+      background: #8b5cf6;
       border-radius: 2px;
-      box-shadow: 0 0 10px rgba(59, 130, 246, 0.9), 0 0 4px #3b82f6;
+      box-shadow: 0 0 8px rgba(139, 92, 246, 0.6), 0 0 2px #8b5cf6;
       animation: navActiveGlow 2.5s infinite ease-in-out;
     }
 
     @keyframes navActiveGlow {
       0%, 100% { opacity: 0.85; transform: scaleX(1); }
-      50% { opacity: 1; transform: scaleX(1.06); }
+      50% { opacity: 1; transform: scaleX(1.04); }
     }
 
     /* Client Login Ghost Button */
@@ -450,18 +453,18 @@
 
     /* Dark Glassmorphic Case Study Snapshot (Obsidian Linear Style) */
     .snapshot-container {
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.5);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 1.25rem;
       overflow: hidden;
       box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.75);
     }
 
     .snapshot-header-banner {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.35) 0%, rgba(59, 130, 246, 0.3) 100%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.22) 0%, rgba(59, 130, 246, 0.18) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
       padding: 1.2rem 1.8rem;
       color: #ffffff;
       display: flex;
@@ -470,10 +473,10 @@
     }
 
     .snapshot-dark-glass-card {
-      background: rgba(15, 23, 42, 0.65);
+      background: rgba(15, 23, 42, 0.5);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 1rem;
       padding: 1.6rem;
       display: flex;
@@ -487,7 +490,7 @@
 
     .snapshot-dark-glass-card:hover {
       transform: translateY(-3px);
-      border-color: rgba(99, 102, 241, 0.35);
+      border-color: rgba(139, 92, 246, 0.28);
       box-shadow: 0 16px 35px -8px rgba(0, 0, 0, 0.7);
     }
 
@@ -580,26 +583,182 @@
     }
 
     .modal-cyber .modal-header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
       padding: 1.25rem 1.75rem;
     }
 
     .modal-cyber .modal-footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
       padding: 1.25rem 1.75rem;
     }
 
     .node-pill {
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: 0.75rem;
       padding: 0.85rem;
       transition: all 0.2s ease;
     }
 
     .node-pill:hover {
-      border-color: rgba(121, 40, 202, 0.45);
-      background: rgba(30, 41, 59, 0.9);
+      border-color: rgba(139, 92, 246, 0.35);
+      background: rgba(30, 41, 59, 0.85);
+    }
+
+    /* Ultra-Minimal Sophisticated FAQ Section */
+    .badge-faq-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.22);
+      color: #c4b5fd;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .faq-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a78bfa;
+      box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+    }
+
+    .faq-accordion-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 1rem;
+      transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(255, 255, 255, 0.14);
+      background-color: rgba(15, 23, 42, 0.62);
+    }
+
+    .faq-item.active {
+      border-color: rgba(139, 92, 246, 0.3);
+      background-color: rgba(15, 23, 42, 0.68);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(139, 92, 246, 0.1);
+    }
+
+    .faq-trigger {
+      width: 100%;
+      padding: 1.35rem 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      background: transparent;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      color: #ffffff;
+      transition: color 0.2s ease;
+    }
+
+    .faq-trigger:focus-visible {
+      outline: 2px solid rgba(139, 92, 246, 0.45);
+      outline-offset: -2px;
+    }
+
+    .faq-question {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.45;
+      color: #f1f5f9;
+      transition: color 0.25s ease;
+    }
+
+    .faq-item:hover .faq-question,
+    .faq-item.active .faq-question {
+      color: #ffffff;
+    }
+
+    .faq-icon-wrapper {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: #94a3b8;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .faq-item:hover .faq-icon-wrapper {
+      border-color: rgba(255, 255, 255, 0.18);
+      color: #f8fafc;
+    }
+
+    .faq-item.active .faq-icon-wrapper {
+      background: rgba(139, 92, 246, 0.14);
+      border-color: rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+    }
+
+    .faq-svg-icon {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .faq-icon-v {
+      transform-origin: 7px 7px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    }
+
+    /* Sleek "+" to "−" transition */
+    .faq-item.active .faq-icon-v {
+      transform: rotate(90deg) scale(0);
+      opacity: 0;
+    }
+
+    /* Smooth CSS Grid Accordion Collapse */
+    .faq-collapse {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .faq-item.active .faq-collapse {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-collapse-inner {
+      overflow: hidden;
+    }
+
+    .faq-answer {
+      padding: 0 1.6rem 1.45rem 1.6rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      font-weight: 400;
+      transition: color 0.25s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      color: #cbd5e1;
     }
   </style>
 </head>
@@ -647,6 +806,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-modern" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-modern" href="#faq">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-modern" href="#contact">Contact</a>
@@ -832,7 +994,7 @@
                     </div>
 
                     <!-- Video / Terminal Bottom Footer Bar -->
-                    <div class="d-flex justify-content-between align-items-center p-2 mt-3 rounded-2" style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.68rem; color: #cbd5e1;">
+                    <div class="d-flex justify-content-between align-items-center p-2 mt-3 rounded-2" style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255, 255, 255, 0.07); font-size: 0.68rem; color: #cbd5e1;">
                       <span><i class="fa-solid fa-server text-info me-1"></i> Docker Cluster</span>
                       <span><i class="fa-solid fa-shield-halved text-primary me-1"></i> TLS 1.3</span>
                     </div>
@@ -978,7 +1140,7 @@
           </div>
 
           <!-- Bottom Footer Bar -->
-          <div class="px-4 py-3 d-flex flex-wrap justify-content-between align-items-center font-mono" style="background: rgba(15, 23, 42, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.75rem; color: #cbd5e1;">
+          <div class="px-4 py-3 d-flex flex-wrap justify-content-between align-items-center font-mono" style="background: rgba(15, 23, 42, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.07); font-size: 0.75rem; color: #cbd5e1;">
             <div>Architect: <strong class="text-white">Afsheen Asif</strong></div>
             <div class="d-flex gap-3">
               <span>⏱️ Turnaround: <strong class="text-white">9 Days</strong></span>
@@ -993,7 +1155,7 @@
 
 
     <!-- 4. INTERACTIVE ROI & SAVINGS CALCULATOR -->
-    <section id="roi-calculator" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <section id="roi-calculator" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.07); border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
       <div class="container py-lg-4">
         
         <!-- Section Title Header -->
@@ -1488,7 +1650,7 @@
 
 
     <!-- 6. CLIENT REVIEWS & ENGINEERING TRUST SECTION -->
-    <section id="reviews" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <section id="reviews" class="py-5 position-relative" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.07); border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
       <div class="container py-lg-4">
         
         <!-- Section Header -->
@@ -1633,6 +1795,120 @@
     </section>
 
 
+    <!-- 6.5. INTERACTIVE FAQ SECTION (ULTRA-MINIMAL OBSIDIAN ACCORDION) -->
+    <section id="faq" class="py-5 position-relative">
+      <div class="container py-lg-4">
+        
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+          <!-- Small pill tag: "CLARITY & EXECUTION" -->
+          <div class="badge-faq-pill mb-3">
+            <span class="faq-pill-dot"></span>
+            CLARITY &amp; EXECUTION
+          </div>
+
+          <!-- Main Title: "Frequently Asked Questions" (Clean bold white typography) -->
+          <h2 class="font-display fw-bolder text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.75rem); letter-spacing: -0.025em; line-height: 1.2;">
+            Frequently Asked Questions
+          </h2>
+
+          <!-- Subtitle -->
+          <p class="mx-auto mb-0" style="max-width: 620px; font-size: 1.05rem; color: #94a3b8; line-height: 1.6;">
+            Everything you need to know about sprint timelines, architecture, and deployment.
+          </p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="mx-auto" style="max-width: 860px;">
+          <div class="faq-accordion-group">
+            
+            <!-- FAQ Item 1 (Open by default) -->
+            <div class="faq-item active" id="faq-1">
+              <button class="faq-trigger" type="button" aria-expanded="true" aria-controls="faq-collapse-1">
+                <span class="faq-question">How quickly can we launch an automated workflow or web sprint?</span>
+                <div class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="faq-icon-h" d="M2 7H12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                    <path class="faq-icon-v" d="M7 2V12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-collapse" id="faq-collapse-1" role="region" aria-labelledby="faq-1">
+                <div class="faq-collapse-inner">
+                  <div class="faq-answer">
+                    Standard workflow automations (n8n, API syncs) are usually delivered in 3–5 business days. Full-stack Next.js web applications generally deploy in 2–3 weeks depending on feature scope.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item" id="faq-2">
+              <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-collapse-2">
+                <span class="faq-question">Can I hire you through Fiverr for payment security?</span>
+                <div class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="faq-icon-h" d="M2 7H12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                    <path class="faq-icon-v" d="M7 2V12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-collapse" id="faq-collapse-2" role="region" aria-labelledby="faq-2">
+                <div class="faq-collapse-inner">
+                  <div class="faq-answer">
+                    Absolutely. You can engage directly via contract inquiry or through my official Fiverr profile where milestone escrow and buyer protection are built in.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item" id="faq-3">
+              <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-collapse-3">
+                <span class="faq-question">Do I need to maintain AWS servers or pay ongoing database bills?</span>
+                <div class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="faq-icon-h" d="M2 7H12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                    <path class="faq-icon-v" d="M7 2V12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-collapse" id="faq-collapse-3" role="region" aria-labelledby="faq-3">
+                <div class="faq-collapse-inner">
+                  <div class="faq-answer">
+                    No. We intentionally engineer serverless, low-maintenance architectures (Vercel, n8n webhooks, API endpoints) designed to run with zero recurring DevOps bloat.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item" id="faq-4">
+              <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-collapse-4">
+                <span class="faq-question">What happens after the project is deployed?</span>
+                <div class="faq-icon-wrapper" aria-hidden="true">
+                  <svg class="faq-svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="faq-icon-h" d="M2 7H12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                    <path class="faq-icon-v" d="M7 2V12" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-collapse" id="faq-collapse-4" role="region" aria-labelledby="faq-4">
+                <div class="faq-collapse-inner">
+                  <div class="faq-answer">
+                    Every deployment includes 14 days of complimentary monitoring, end-to-end testing, and complete documentation so your team has total control.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- 7. CONTACT FORM SECTION (STRIPE / LINEAR STYLE SLEEK PANEL) -->
     <section id="contact" class="py-5 position-relative">
       <div class="container py-lg-4">
@@ -1712,7 +1988,7 @@
 
             <!-- Right Contact Form (Stripe / Linear Style Panel) -->
             <div class="col-lg-7">
-              <div class="p-4 rounded-4" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.04), 0 20px 50px rgba(0, 0, 0, 0.6);">
+              <div class="p-4 rounded-4" style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.07); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.04), 0 20px 50px rgba(0, 0, 0, 0.6);">
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                   
                   <!-- Web3Forms Configuration Hidden Fields -->
@@ -1775,11 +2051,11 @@
 
 
   <!-- 8. FOOTER (MULTI-COLUMN MINIMALIST SILICON VALLEY ARCHITECTURE) -->
-  <footer class="py-5" style="background: #020617; border-top: 1px solid rgba(255, 255, 255, 0.08); z-index: 10; position: relative;">
+  <footer class="py-5" style="background: #07090e; border-top: 1px solid rgba(255, 255, 255, 0.07); z-index: 10; position: relative;">
     <div class="container py-lg-3">
       
       <!-- Brand & Global Presence Header Bar -->
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center pb-4 mb-4 border-bottom" style="border-color: rgba(255, 255, 255, 0.08) !important;">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center pb-4 mb-4 border-bottom" style="border-color: rgba(255, 255, 255, 0.07) !important;">
         <div class="d-flex align-items-center gap-2.5 mb-3 mb-md-0">
           <div class="d-flex align-items-center justify-content-center rounded-3 flex-shrink-0" 
                style="width: 32px; height: 32px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(59, 130, 246, 0.3) 100%); border: 1px solid rgba(139, 92, 246, 0.45); box-shadow: 0 0 14px rgba(99, 102, 241, 0.35);">
@@ -1835,6 +2111,9 @@
               <a href="#pricing" class="footer-link">Pricing & Sprints</a>
             </li>
             <li class="footer-link-item">
+              <a href="#faq" class="footer-link">FAQ & Architecture</a>
+            </li>
+            <li class="footer-link-item">
               <a href="#modal-client-login" data-bs-toggle="modal" class="footer-link">Client Portal</a>
             </li>
           </ul>
@@ -1875,7 +2154,7 @@
 
       <!-- Copyright Sub-Footer -->
       <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 border-top font-mono" 
-           style="border-color: rgba(255, 255, 255, 0.08) !important; font-size: 0.75rem; color: #cbd5e1;">
+           style="border-color: rgba(255, 255, 255, 0.07) !important; font-size: 0.75rem; color: #cbd5e1;">
         <div>© 2026 Afsheen Asif. All rights reserved.</div>
         <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
           <span>Engineered for 60fps & 99.9% Uptime</span>
@@ -2663,6 +2942,32 @@
           });
         });
       }
+
+      // 4. Interactive FAQ Accordion Panel Logic
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        if (trigger) {
+          trigger.addEventListener('click', () => {
+            const isCurrentlyActive = item.classList.contains('active');
+
+            // Close all FAQ items
+            faqItems.forEach(otherItem => {
+              otherItem.classList.remove('active');
+              const otherTrigger = otherItem.querySelector('.faq-trigger');
+              if (otherTrigger) {
+                otherTrigger.setAttribute('aria-expanded', 'false');
+              }
+            });
+
+            // Smoothly toggle the clicked FAQ item
+            if (!isCurrentlyActive) {
+              item.classList.add('active');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+          });
+        }
+      });
 
     });
   </script>
